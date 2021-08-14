@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inline {
+            /* width is ignored - the element only as much width as required */
+            width: 40%;
+        }
+        
+        .block {
+            display: block;
+            width: 40%;
+            /* by default they take up 100% available width */
+            margin: 10px 0;
+            background-color: gray;
+        }
+        
+        .inline-block {
+            display: inline-block;
+            width: 40%;
+            background-color: aqua;
+            /* accept width (by default it takes up only as much width as required) */
+        }
+        
+        .text-bold {
+            font-weight: bold;
+        }
+        
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <span class="inline">HTML</span>
+    <br>
+    <span class="inline">CSS</span>
+    <br>
+    <span class="inline">JAVASCRIPT</span>
+    <span class="block">HTML</span>
+    <span class="block">CSS</span>
+    <span class="block">JAVASCRIPT</span>
+    <div class="text-bold">
+        <span class="highlight">HTML</span>
+        <span class="highlight">CSS</span>
+        <span class="highlight">JAVASCRIPT</span>
+    </div>
+    <span class="inline-block">HTML</span>
+    <br>
+    <span class="inline-block">CSS</span>
+    <br>
+    <span class="inline-block">JAVASCRIPT</span>
+</body>
+
+</html>

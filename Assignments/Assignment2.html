@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .panels {
+            border-radius: 10px;
+            display: inline-block;
+            width: 50%;
+            margin-bottom: 30px;
+            border-style: solid;
+            border-width: 1px;
+        }
+        
+        .panels-body {
+            font-size: 15px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            padding: 10px;
+            background-color: lavender;
+        }
+        
+        .panels-heading {
+            font-size: 20px;
+            padding-left: 5px;
+            color: white;
+        }
+        
+        .panels-1 {
+            border-color: navy;
+            background-color: navy;
+        }
+        
+        .panels-2 {
+            border-color: olive;
+            background-color: olive;
+        }
+        
+        .panels-3 {
+            border-color: crimson;
+            background-color: crimson;
+        }
+        
+        .button {
+            background-color: navy;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        
+        .button-ellipsized {
+            background-color: navy;
+            border-style: none;
+            color: white;
+            white-space: nowrap;
+            padding: 15px;
+            width: 90px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .button:hover {
+            background-color: rgb(81, 81, 224);
+        }
+        
+        .button-ellipsized:hover {
+            background-color: teal;
+        }
+        
+        .button2 {
+            background-color: olive;
+        }
+        
+        .button3 {
+            background-color: crimson;
+        }
+        
+        .button4 {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="panels panels-1">
+        <div class="panels-heading">
+            What is CSS?
+        </div>
+        <div class="panels-body">CSS stands for Cascading Style Sheets.CSS is the language we use to style a Web page.</div>
+    </div>
+    <div class="panels panels-2">
+        <div class="panels-heading">
+            What is CSS?
+        </div>
+        <div class="panels-body">CSS stands for Cascading Style Sheets.CSS is the language we use to style a Web page.</div>
+    </div>
+    <div class="panels panels-3">
+        <div class="panels-heading">
+            What is CSS?
+        </div>
+        <div class="panels-body">CSS stands for Cascading Style Sheets.CSS is the language we use to style a Web page.</div>
+    </div>
+    <br>
+    <button class="button">Buy now!</button>
+    <button class="button button2">Ok! Got it! Great!</button>
+    <button class="button button3">Delete</button>
+    <button class="button button4">Google Search</button>
+    <br>
+    <button class="button-ellipsized">Buy now!</button>
+    <button class="button-ellipsized button2">Ok! Got it! Great!</button>
+    <button class="button-ellipsized button3">Delete</button>
+    <button class="button-ellipsized button4">Google Search</button>
+
+</body>
+
+</html>
