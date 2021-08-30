@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Clone</title>
+    >
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 90%;
+            margin: 1em auto;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .product {
+            flex: 0 0 100%;
+            margin-bottom: 1em;
+        }
+        
+        .product-details h3 {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            opacity: .95;
+            padding-top: 1px;
+            padding-bottom: 2px;
+            margin-top: 37px;
+        }
+        
+        .product-details span {
+            color: #005da6;
+        }
+        
+        .product-details span:hover {
+            border-bottom: 2px solid #005da6;
+        }
+        
+        .product img {
+            width: 100%;
+            width: 100%;
+        }
+        
+        .product img:hover {
+            opacity: 90%;
+        }
+        
+        @media (min-width: 640px) {
+            .product {
+                flex-basis: 45%;
+            }
+        }
+        
+        @media (min-width: 1080px) {
+            .product {
+                flex-basis: 24%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Flex Responsive Layout</h1>
+    </header>
+    <main>
+
+        <section class="products">
+            <div class="product">
+                <div class="product-img">
+                    <img src="1.webp" alt="OneNode">
+                </div>
+                <div class="product-details">
+                    <h3>OneNode</h3>
+                    <p>Organise your notes and your life.</p>
+                    <a href="https://www.microsoft.com/en-in/">Learn More-></a>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-img">
+                    <img src="2.webp" alt="Microsoft 365">
+                </div>
+                <div class="product-details">
+                    <h3>Microsoft OneDrive</h3>
+                    <p>Save your files and photos to OneDrive and access them from any device, anywhere.</p>
+                    <a href="https://www.microsoft.com/en-in/">Learn More-></a>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-img">
+                    <img src="3.webp" alt="Microsoft Edge">
+                </div>
+                <div class="product-details">
+                    <h3>Microsoft 365</h3>
+                    <p>Premium Office apps, extra cloud storage, advanced security, and more – all in one convenient subscription.</p>
+                    <a href="https://www.microsoft.com/en-in/">For upt ot 6 people-></a>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-img">
+                    <img src="4.jfif" alt="Xbox Game Pass Ultimate">
+                </div>
+                <div class="product-details">
+                    <h3>Xbox Game Pass Ultimate</h3>
+                    <p>Get your first month of membership for ₹ 50. Play on the devices you own. Includes EA Play. Offer available to new subscribers only.</p>
+                    <a href="https://www.microsoft.com/en-in/">Join now</a>
+                </div>
+            </div>
+
+
+
+    </main>
+</body>
+
+</html>

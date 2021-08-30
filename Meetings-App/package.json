@@ -1,0 +1,16 @@
+{
+  "name": "meetings-app",
+  "version": "1.0.0",
+  "description": "Mini Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bhawana Kumari",
+  "license": "ISC",
+  "keywords": [],
+  "devDependencies": {
+    "live": "^0.1.25-beta.0",
+    "server": "^1.0.35"
+  }
+}

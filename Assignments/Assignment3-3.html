@@ -7,6 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        #navigation-bar li {
+            display: inline;
+            list-style: none;
+        }
+        
+        #navigation-bar ul {
+            padding-inline-start: 0;
+        }
+        
         .header {
             text-align: left;
             height: 64px;
@@ -47,6 +56,15 @@
         .red-s {
             color: red;
         }
+        
+        .logo {
+            height: 27px;
+            filter: blur(1px);
+        }
+        
+        .logo:hover {
+            filter: blur(0);
+        }
     </style>
 </head>
 
@@ -54,9 +72,14 @@
     <nav>
         <div class="header">
             <ul>
-                <li><a href="file:///C:/Users/hp/Documents/Fynd/Assignments/Assignment3-1.html">Home</a></li>
-                <li><a href="file:///C:/Users/hp/Documents/Fynd/Assignments/Assignment3-2.html">Portfolio</a></li>
-                <li><a href="/">Contact</a></li>
+                <li>
+                    <a id="logo" href="Assignment3-1.html">
+                        <img src="C:\Users\hp\Documents\Fynd\Images\logo.png" height="20rem" width="20rem" alt="home logo">
+                    </a>
+                </li>
+                <li><a href="Assignment3-1.html">Home</a></li>
+                <li><a href="Assignment3-2.html">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </div>
     </nav>

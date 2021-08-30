@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://img.icons8.com/ios-glyphs/30/000000/mac-os.png" type="image/x-icon">
+    <title>Apple </title>
+    <script src="https://kit.fontawesome.com/ff9dc5af4a.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            font-size: 80%;
+        }
+        
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            text-align: center;
+            height: 50px;
+            background-color: black;
+            padding: 0 10%;
+            padding-right: 0;
+            padding-left: 15%;
+        }
+        
+        .fa-bars {
+            color: gray;
+            background-color: black;
+            border: none;
+        }
+        
+        .fa-bars:hover {
+            color: white;
+        }
+        
+        .fa-apple,
+        .fa-shopping-bag,
+        .fa-search {
+            width: 20px;
+        }
+        
+        .list {
+            width: 70%;
+            margin: 0 4%;
+        }
+        
+        .list ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+        
+        .list-item {
+            text-overflow: hidden;
+            padding: 0 25px 0 5px;
+        }
+        
+        .list ul li {
+            margin: 0 10px 0 0;
+        }
+        
+        .list ul li:nth-child(1) {
+            margin-left: 0;
+        }
+        
+        .list li,
+        .list a {
+            color: gray;
+            line-height: 44px;
+            text-decoration: none;
+        }
+        
+        .list ul li a:hover {
+            color: white;
+        }
+        
+        .fa-shopping-bag {
+            text-align: end;
+        }
+        
+        .welcome-msg {
+            text-align: center;
+            color: rgb(82, 79, 79);
+        }
+        
+        .big-screen-img,
+        .small-screen-img {
+            display: none;
+        }
+        
+        .menu-items {
+            position: absolute;
+            background-color: black;
+            top: 50px;
+            left: 0;
+        }
+        
+        .menu-items {
+            width: 100%;
+            font-size: 1.2rem;
+        }
+        
+        .list-styling {
+            padding-left: 20%;
+            padding-right: 20%;
+        }
+        
+        .list-styling li {
+            list-style-type: none;
+        }
+        
+        .list-items-2 {
+            color: gray;
+            text-decoration: none;
+        }
+        
+        .list-items-2:hover {
+            color: white;
+        }
+        
+        .mob-menu {
+            display: none;
+        }
+        
+        hr {
+            border-color: gray;
+        }
+        
+        @media (max-width:765px) {
+            .hiding-items {
+                display: none;
+            }
+            .menu-btn {
+                display: flex;
+                border: none;
+            }
+            .small-screen-img {
+                display: block;
+            }
+        }
+        
+        @media (min-width:765px) {
+            .big-screen-img {
+                display: block;
+            }
+            .menu-items {
+                display: none;
+            }
+            .menu-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="list">
+                <ul>
+                    <li class="menu-btn"><button onclick="myFunction()" class="fa fa-bars"></button></li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-apple"></i>
+                        </a>
+                    </li>
+                    <li class="hiding-items">
+                        <a href="#" class="list-item">Store</a>
+                    </li>
+                    <li class="hiding-items">
+                        <a href="#" class="list-item">Mac</a>
+                    </li>
+                    <li class="hiding-items">
+                        <a href="#" class="list-item">iPad</a>
+                    </li>
+                    <li class="hiding-items">
+                        <a href="#" class="list-item">iPhone</a>
+                    </li>
+                    <li class="hiding-items">
+                        <a href="#" class="list-item">Watch</a>
+                    </li>
+                    <li class="hiding-items">
+                        <a href="#" class="list-item">TV</a>
+                    </li>
+                    <li class="hiding-items">
+                        <a href="#" class="list-item">Music</a>
+                    </li>
+                    <li class="hiding-items">
+                        <a href="#" class="list-item">Support</a>
+                    </li>
+                    <li class="hiding-items">
+                        <a href="#" id="search">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="list-item"><i class="fas fa-shopping-bag"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="menu-items" id="mob-menu">
+        <ul class="list-styling">
+
+
+            <li>
+                <a href="#" class="list-items-2">Store</a>
+            </li>
+            <hr>
+            <li>
+                <a href="#" class="list-items-2">Mac</a>
+            </li>
+            <hr>
+            <li>
+                <a href="#" class="list-items-2">iPad</a>
+            </li>
+            <hr>
+            <li>
+                <a href="#" class="list-items-2">iPhone</a>
+            </li>
+            <hr>
+            <li>
+                <a href="#" class="list-items-2">Watch</a>
+            </li>
+            <hr>
+            <li>
+                <a href="#" class="list-items-2">TV</a>
+            </li>
+            <hr>
+            <li>
+                <a href="#" class="list-items-2">Music</a>
+            </li>
+            <hr>
+            <li>
+                <a href="#" class="list-items-2">Support</a>
+            </li>
+
+
+        </ul>
+    </div>
+    <!-- <script>
+        function myFunction() {
+            var x = document.getElementById("mob-menu");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script> -->
+</body>
+
+</html>

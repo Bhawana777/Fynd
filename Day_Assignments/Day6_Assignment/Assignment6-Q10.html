@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .collapsible {
+            background-color: #F2F2F2;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 13px;
+        }
+        
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        p {
+            font-size: 12px;
+            color: #919196;
+            ;
+        }
+        
+        .active,
+        .collapsible:hover {
+            background-color: #555;
+            color: white;
+        }
+        
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+        
+        div.for-desktop {
+            padding-top: 0;
+            margin-top: 0;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            align-content: space-around;
+            padding: 0 5%;
+            background-color: #F2F2F2;
+        }
+        
+        .collapsible {
+            border-bottom: rgb(199, 189, 189) 1px solid;
+        }
+        
+        @media (min-width:800px) {
+            .for-desktop {
+                display: flex;
+            }
+            .for-mobile {
+                display: none;
+            }
+        }
+        
+        @media (max-width:799px) {
+            .for-mobile {
+                display: block;
+            }
+            div.for-desktop {
+                background-color: lawngreen;
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <footer>
+        <div class="for-mobile">
+            <button type="button" class="collapsible">Shop and Learn</button>
+            <div class="content">
+                <p>Mac</p>
+                <p>iPad</p>
+                <p>iPhone</p>
+                <p>Mac</p>
+                <p>iPad</p>
+                <p>iPhone</p>
+                <p>Mac</p>
+                <p>iPad</p>
+                <p>iPhone</p>
+                <p>Mac</p>
+                <p>iPad</p>
+                <p>iPhone</p>
+            </div>
+            <button type="button" class="collapsible">Services</button>
+            <div class="content">
+                <p>Apple Music</p>
+                <p>Apple TV+</p>
+                <p>Apple Fitness+</p>
+                <p>Apple News+</p>
+                <p>Apple Arcade</p>
+                <p>iCloud</p>
+                <p>Apple One</p>
+                <p>Apple Card</p>
+                <p>Apple Books</p>
+                <p>Apple Podcasts</p>
+                <p>Apple Store</p>
+                <p>iPhone</p>
+            </div>
+            <button type="button" class="collapsible">Account</button>
+            <div class="content">
+                <p>Manage you Apple ID</p>
+                <p>Apple Store Account</p>
+                <p>iCloud.com</p>
+
+            </div>
+            <button type="button" class="collapsible">Apple Store</button>
+            <div class="content">
+                <p>Find a Store</p>
+                <p>Shop Online</p>
+                <p>Genius Bar</p>
+                <p>Today at Apple</p>
+                <p>Apple Camp</p>
+                <p>Apple Store App</p>
+                <p>Refurbished and Clearance</p>
+                <p>Financing</p>
+                <p>Apple Trade In</p>
+                <p>Order Status</p>
+                <p>Shopping Help</p>
+
+            </div>
+            <button type="button" class="collapsible">For Business</button>
+            <div class="content">
+                <p>Apple Business</p>
+                <p>Shop for Business</p>
+            </div>
+            <button type="button" class="collapsible">For Education</button>
+            <div class="content">
+                <p>Apple and Education</p>
+                <p>Shop for K-12</p>
+                <p>Shop for College</p>
+
+            </div>
+            <button type="button" class="collapsible">For Healthcare</button>
+            <div class="content">
+                <p>Apple in Healthcare</p>
+                <p>Health on Apple Watch</p>
+                <p>Health records on iPhone</p>
+
+            </div>
+            <button type="button" class="collapsible">For Government</button>
+            <div class="content">
+                <p>Shop for Government</p>
+                <p>Shop for Veterans and Military</p>
+
+            </div>
+            <button type="button" class="collapsible">Apple Values</button>
+            <div class="content">
+                <p>Accessibility</p>
+                <p>Education</p>
+                <p>Environment</p>
+                <p>Inclusion and diversity</p>
+                <p>Privacy</p>
+                <p>Racial Equity and Justice</p>
+                <p>Supplieer Responsibility</p>
+
+            </div>
+            <button type="button" class="collapsible">About Apple</button>
+            <div class="content">
+                <p>News Room</p>
+                <p>Apple Leadership</p>
+                <p>Caareer Opportunities</p>
+                <p>Investors</p>
+                <p>Ethics & Compliance</p>
+                <p>Events</p>
+                <p>Contact Apple</p>
+            </div>
+        </div>
+        <div class="for-desktop">
+            <div>
+                <h4>Shop and Learn</h4>
+                <p>Mac</p>
+                <p>iPad</p>
+                <p>iPhone</p>
+                <p>Mac</p>
+                <p>iPad</p>
+                <p>iPhone</p>
+                <p>Mac</p>
+                <p>iPad</p>
+                <p>iPhone</p>
+                <p>Mac</p>
+                <p>iPad</p>
+                <p>iPhone</p>
+            </div>
+
+            <div>
+                <h4>Services</h4>
+                <p>Apple Music</p>
+                <p>Apple TV+</p>
+                <p>Apple Fitness+</p>
+                <p>Apple News+</p>
+                <p>Apple Arcade</p>
+                <p>iCloud</p>
+                <p>Apple One</p>
+                <p>Apple Card</p>
+                <p>Apple Books</p>
+                <p>Apple Podcasts</p>
+                <p>Apple Store</p>
+                <p>iPhone</p>
+            </div>
+
+
+
+            <div>
+                <h4>Account</h4>
+                <p>Manage you Apple ID</p>
+                <p>Apple Store Account</p>
+                <p>iCloud.com</p>
+
+            </div>
+
+            <div>
+                <h4>Apple Store</h4>
+                <p>Find a Store</p>
+                <p>Shop Online</p>
+                <p>Genius Bar</p>
+                <p>Today at Apple</p>
+                <p>Apple Camp</p>
+                <p>Apple Store App</p>
+                <p>Refurbished and Clearance</p>
+                <p>Financing</p>
+                <p>Apple Trade In</p>
+                <p>Order Status</p>
+                <p>Shopping Help</p>
+            </div>
+
+            <div>
+                <h4>For Business</h4>
+                <p>Apple Business</p>
+                <p>Shop for Business</p>
+            </div>
+
+            <div>
+                <h4>For Education</h4>
+                <p>Apple and Education</p>
+                <p>Shop for K-12</p>
+                <p>Shop for College</p>
+            </div>
+
+            <div>
+                <h4>For Healthcare</h4>
+                <p>Apple in Healthcare</p>
+                <p>Health on Apple Watch</p>
+                <p>Health records on iPhone</p>
+            </div>
+
+            <div>
+                <h4>For Government</h4>
+                <p>Shop for Government</p>
+                <p>Shop for Veterans and Military</p>
+            </div>
+
+            <div>
+                <h4>Apple values</h4>
+                <p>Accessibility</p>
+                <p>Education</p>
+                <p>Environment</p>
+                <p>Inclusion and diversity</p>
+                <p>Privacy</p>
+                <p>Racial Equity and Justice</p>
+                <p>Supplieer Responsibility</p>
+
+            </div>
+
+            <div>
+                <h4>About Apple</h4>
+                <p>News Room</p>
+                <p>Apple Leadership</p>
+                <p>Caareer Opportunities</p>
+                <p>Investors</p>
+                <p>Ethics & Compliance</p>
+                <p>Events</p>
+                <p>Contact Apple</p>
+            </div>
+
+        </div>
+    </footer>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

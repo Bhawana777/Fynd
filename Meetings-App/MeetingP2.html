@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meetings-App</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="menubar.css">
+    <link rel="stylesheet" href="meetingP2.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="topnav">
+            <li><a href="CalenderP1.html">Calendar</a></li>
+            <li><a href="MeetingP2.html">Meetings</a></li>
+            <li><a href="TeamsP1.html">Teams</a></li>
+            <li class="right"><a href="index.html">Logout</a></li>
+            <li class="right">
+                <a href="#Hello">Hello<span style="color: rgb(56,174,193);"> jane.deo@example.com</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="calendar">
+        <h1>Meetings</h1>
+        <hr style="background-color: rgb(154,154,154);" />
+        <ul class="meeting-ul">
+            <li class="meeting-li"><a href="MeetingP2.html" class="active">Filter / Search a meeting</a></li>
+            <li class="meeting-li"><a href="MeetingP1.html">Add a meeting</a></li>
+        </ul>
+        <hr style="margin-top: -3px; width: 884px; float: right;" />
+        <div class="calendar-hour">
+            <p id="Search">Search for meetings</p>
+            <hr style="color: rgb(154,154,154); border-bottom-color: lightskyblue;" />
+            <p id="headings">Date</p>
+            <label for="cars"></label>
+            <select name="cars" id="cars" class="box-borders" style="height: 35px; width: 1100px;">
+                    <option value="ALL">ALL</option>
+                    <option value="PAST">PAST</option>
+                    <option value="TODAY">TODAY</option>
+                    <option value="TOMORROW">TOMORROW</option>
+                    </select>
+            <p id="headings">Search for</p>
+            <textarea id="input-textarea" rows="3" cols="50" class="box-borders" placeholder="Search using words which describe the meeting"></textarea>
+            <br>
+            <a href="#" class="button">Search</a>
+        </div>
+        <h2>Meeting matching search criteria</h2>
+        <hr style="margin-bottom: 20px;" />
+        <div class="flex-container">
+            <p><b>20 August 2021</b> 06:00 - 07:00</p>
+            <p style="margin: 0 0 15px 0;">Project kickoff</p>
+            <a href="#" class="button-2">Excuse yourself</a>
+            <hr style="margin-left: 0; margin-right: 5px;" />
+            <p style="margin: 13px 0 8px 0;"><b>Attendees:</b> mark@example.com,jane@example.com</p>
+            <div class="container">
+                <div id="st-box">
+                    <label for="cars"></label>
+                    <select name="cars" id="cars" style="height: 35px; width: 120px;">
+                    <option value="Select memeber">Select member</option>
+                    <option value="mark@example.com">mark@example.com</option>
+                    <option value="jane@example.com">jane@example.com</option>
+                </select>
+                </div>
+                <div id="rd-box">
+                    <a href="#" class="button-3">Add</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="flex-container">
+            <p><b>20 August 2021</b> 09:00 - 10:30</p>
+            <p style="margin: 0 0 15px 0;">AWS architecture</p>
+            <a href="#" class="button-2">Excuse yourself</a>
+            <hr style="margin-left: 0; margin-right: 5px;" />
+            <p style="margin: 13px 0 8px 0;"><b>Attendees:</b> john@example.com,jane@example.com</p>
+            <div class="container">
+                <div id="st-box">
+                    <label for="cars"></label>
+                    <select name="cars" id="cars" style="height: 35px; width: 120px;">
+                        <option value="Select memeber">Select member</option>
+                        <option value="mark@example.com">john@example.com</option>
+                        <option value="jane@example.com">jane@example.com</option>
+                </select>
+                </div>
+                <div id="rd-box">
+                    <a href="#" class="button-3">Add</a>
+                </div>
+            </div>
+        </div>
+        <hr />
+    </div>
+    <footer class="foot">
+        &copy;bhawana
+    </footer>
+</body>
+
+</html>

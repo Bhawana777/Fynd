@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telstra clone</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', sans-serif;
+        }
+        
+        main {
+            background-color: #f4f4f4;
+        }
+        
+        .product_group {
+            margin: 2em 5em;
+        }
+        
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
+        }
+        
+        .product {
+            flex: 0 0 100%;
+            margin-bottom: 1em;
+            border-bottom: 1px solid grey;
+        }
+        
+        .product:hover {
+            color: #001e82;
+            border-bottom: 1px solid #001e82;
+        }
+        
+        .discount img {
+            width: 100%;
+        }
+        
+        .product_list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 1em;
+        }
+        
+        .product_list h3 {
+            margin: 10px 0;
+        }
+        
+        .product_list p {
+            margin: 0;
+        }
+        
+        .claim-btn {
+            margin: 15px 0;
+            padding: 20px;
+            color: #0064d2;
+            font-weight: bold;
+            font-size: 16px;
+            border: 1px solid #0064d2;
+            border-radius: 3px;
+        }
+        
+        @media (min-width: 1024px) {
+            .product {
+                flex-basis: 50%;
+            }
+            .product_list:nth-child(1) {
+                flex-basis: 60%;
+            }
+            .product_list:nth-child(2) {
+                flex-basis: 30%;
+            }
+            .product_list img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <div class="product_group">
+            <h1>Flex Responsive Layout</h1>
+            <section class="products">
+                <section class="product_list">
+                    <div class="product">
+                        <h2>Mobile Phones</h2>
+                        <p>
+                            Devices | Plans | Pre-paid
+                        </p>
+                    </div>
+                    <div class="product">
+                        <h2>NBA & Internet</h2>
+                        <p>
+                            Plans | Packages | WiFi Boosters
+                        </p>
+                    </div>
+                    <div class="product">
+                        <h2>Tablets</h2>
+                        <p>
+                            Devices | Plans | Pre-paid
+                        </p>
+                    </div>
+                    <div class="product">
+                        <h2>Mobile Broadband</h2>
+                        <p>
+                            Modems | SIM only | Pre-paid
+                        </p>
+                    </div>
+                    <div class="product">
+                        <h2>Entertainment</h2>
+                        <p>
+                            TV & Movies | Gaming | Sports
+                        </p>
+                    </div>
+                    <div class="product">
+                        <h2>Deals</h2>
+                        <p>
+                            Mobiles | Accessories & more
+                        </p>
+                    </div>
+
+                </section>
+                <section class="product_list">
+                    <div class="discount">
+                        <img src="price.jpg" alt="discount">
+                        <h3>7 day price match</h3>
+                        <p>Find a better price within 7 days of receiving your new, eligible phone from Telstra and we’ll credit the difference to your bill.</p>
+                        <button class="claim-btn">See how to claim</button>
+                    </div>
+
+                </section>
+            </section>
+        </div>
+
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meetings-App</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="menubar.css">
+    <link rel="stylesheet" href="teams.css">
+    <link rel="stylesheet" href="popup-form.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="topnav">
+            <li><a href="CalenderP1.html">Calendar</a></li>
+            <li><a href="MeetingP1.html">Meetings</a></li>
+            <li><a href="TeamsP1.html">Teams</a></li>
+            <li class="right"><a href="index.html">Logout</a></li>
+            <li class="right">
+                <a href="#Hello">Hello<span style="color: rgb(56,174,193);"> jane.deo@example.com</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="calendar">
+        <h1>Teams</h1>
+        <hr>
+        <p style="color: gray;">View and edit teams you are part of</p>
+        <div class="flex-container">
+            <div>
+                <h3>Customer acquisition campaign</h3>
+                <h4>@customer-acquisition</h4>
+                <p style="color: gray;">Team to come up with strategies to win over customers by end of FY21</p>
+                <a href="#" class="button-2">Excuse yourself</a>
+                <hr style="width: 300px; align-self: center;">
+                <p><b>Members:</b> john@example.com,jane@example.com</p>
+                <div class="container">
+                    <div id="st-box">
+                        <label for="cars"></label>
+                        <select name="cars" id="cars" style="height: 33px; width: 145px;">
+                        <option value="Select memeber">Select member</option>
+                        <option value="mark@example.com">john@example.com</option>
+                        <option value="jane@example.com">jane@example.com</option>
+                </select>
+                    </div>
+                    <div id="rd-box">
+                        <a href="#" class="button-3">Add</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3>MERN stack training</h3>
+                <h4>@mern-stack-training</h4>
+                <p style="color: gray;">Group attending MERN stack training for website revamp project</p>
+                <a href="#" class="button-2">Excuse yourself</a>
+                <hr style="width: 300px; align-self: center;">
+                <p><b>Members:</b> jane@example.com,mark@example.com</p>
+                <div class="container">
+                    <div id="st-box">
+                        <label for="cars"></label>
+                        <select name="cars" id="cars" style="height: 35px; width: 145px;">
+                        <option value="Select memeber">Select member</option>
+                        <option value="mark@example.com">jane@example.com</option>
+                        <option value="jane@example.com">mark@example.com</option>
+                </select>
+                    </div>
+                    <div id="rd-box">
+                        <a href="#" class="button-3">Add</a>
+                    </div>
+
+                </div>
+            </div>
+            <div style="padding: 130px 20px 60px;">
+                <!-- <b id="b-tag">+</b> -->
+                <button class="open-button" onclick="openForm()">+</button>
+
+                <div class="form-popup" id="myForm">
+                    <form class="form-container">
+                        <h1 style="margin-top: 20px;">Create Team</h1>
+
+                        <label for="name"><b>Team Name</b></label>
+                        <input type="text" placeholder="Enter team name here" name="name" required>
+
+                        <label for="short-name"><b>Short Name</b></label>
+                        <input type="text" placeholder="Enter Short Name here" name="name" required>
+
+                        <label for="des"><b>Team Despriction</b></label>
+                        <textarea rows="3" cols="40" class="box-borders" id="form-textarea" placeholder="What is the agenda of the meeting?"></textarea>
+
+                        <label for="email"><b>Team Members</b></label>
+                        <!-- <input type="text" placeholder="Enter Short Name here" name="name" required> -->
+                        <div class="container">
+                            <div id="st-box">
+                                <label for="cars"></label>
+                                <select name="cars" id="cars" style="height: 35px; width: 145px;">
+                                <option value="Select memeber">Select member</option>
+                                <option value="mark@example.com">jane@example.com</option>
+                                <option value="jane@example.com">mark@example.com</option>
+                        </select>
+                            </div>
+                            <div id="rd-box">
+                                <a href="#" class="button-3">Add</a>
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="btn">Login</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    </form>
+                </div>
+
+                <script>
+                    function openForm() {
+                        document.getElementById("myForm").style.display = "block";
+                    }
+
+                    function closeForm() {
+                        document.getElementById("myForm").style.display = "none";
+                    }
+                </script>
+            </div>
+        </div>
+        <hr />
+    </div>
+    <footer class="foot">
+        &copy;bhawana
+    </footer>
+</body>
+
+</html>

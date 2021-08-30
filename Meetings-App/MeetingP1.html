@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meetings-App</title>
+    <link rel="stylesheet" href="app-3.css">
+    <link rel="stylesheet" href="app-4.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="menubar.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="topnav">
+            <li><a href="CalenderP1.html">Calendar</a></li>
+            <li><a href="MeetingP1.html">Meetings</a></li>
+            <li><a href="TeamsP1.html">Teams</a></li>
+            <li class="right"><a href="index.html">Logout</a></li>
+            <li class="right">
+                <a href="#Hello">Hello<span style="color: rgb(56,174,193);"> jane.deo@example.com</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="calendar">
+        <h1>Meetings</h1>
+        <hr style="background-color: rgb(154,154,154);" />
+        <ul class="meeting-ul">
+            <li class="meeting-li"><a href="MeetingP2.html">Filter/Search a meeting</a></li>
+            <li class="meeting-li"><a href="MeetingP1.html" class="active">Add a meeting</a></li>
+        </ul>
+        <hr style="margin-top: 0; width: 890px; float: right;" />
+        <div class="calendar-hour">
+            <p id="Search">Add a new meeting</p>
+            <hr style="color: rgb(154,154,154); border-bottom-color: lightskyblue;" />
+            <p id="headings">Date</p>
+            <input type="date" id="date-email-input" name="meetingdate" class="box-borders">
+            <p id="headings">Start time (hh:mm)</p>
+            <div class="container">
+                <div id="st-box">
+                    <label for="cars"></label>
+                    <select name="cars" id="cars" style="height: 40px; width: 70px;" class="box-borders">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="opel">Opel</option>
+                    <option value="audi">Audi</option>
+                </select> :
+                </div>
+                <!--<p id="sep-p">:</p>-->
+
+                <div id="rd-box">
+                    <label for="cars"></label>
+                    <select name="cars" id="cars" style="height: 40px; width: 70px;" class="box-borders">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="opel">Opel</option>
+                    <option value="audi">Audi</option>
+                </select>
+                </div>
+            </div>
+            <p id="headings">End time (hh:mm)</p>
+            <div class="container">
+                <div id="st-box">
+                    <label for="cars"></label>
+                    <select name="cars" id="cars" style="height: 40px; width: 70px;" class="box-borders">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="opel">Opel</option>
+                    <option value="audi">Audi</option>
+                </select> :
+                </div>
+                <!--<p id="sep-p">:</p>-->
+
+                <div id="rd-box">
+                    <label for="cars"></label>
+                    <select name="cars" id="cars" style="height: 40px; width: 70px;" class="box-borders">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="opel">Opel</option>
+                    <option value="audi">Audi</option>
+                </select>
+                </div>
+            </div>
+            <p id="headings">Despriction</p>
+            <textarea id="input-textarea" rows="3" cols="50" class="box-borders" placeholder="What is the agenda of the meeting?"></textarea>
+            <p id="headings">EmailId's of attendees, or Team's short</p>
+            <label for="emails"></label>
+            <input type="email" id="date-email-input" name="emails" class="box-borders" placeholder="john@example.com, @annual-day, mark@example.com" multiple>
+            <p style="margin-top: 5px;margin-bottom: 20px; color: white">Separate emailids/team's short names by commas - team short names always begin with @</p>
+            <a href="#" class="button">Add meeting</a>
+        </div>
+        <hr />
+    </div>
+    <footer class="foot">
+        &copy;bhawana
+    </footer>
+</body>
+
+</html>

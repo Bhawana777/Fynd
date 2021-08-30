@@ -7,6 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Example Consulting Pvt.Ltd.</title>
     <style>
+        #navigation-bar li {
+            display: inline;
+            list-style: none;
+        }
+        
+        #navigation-bar ul {
+            padding-inline-start: 0;
+        }
+        
         .header {
             text-align: left;
             height: 64px;
@@ -43,16 +52,31 @@
         .header a:focus {
             border-bottom: 5px solid rgb(241, 86, 90);
         }
+        
+        .logo {
+            height: 27px;
+            filter: blur(1px);
+        }
+        
+        .logo:hover {
+            filter: blur(0);
+        }
     </style>
 </head>
+C:\Users\hp\Documents\Fynd\Day_Assignments\Day3_Assignment
 
 <body>
     <nav>
         <div class="header">
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="file:///C:/Users/hp/Documents/Fynd/Assignments/Assignment3-2.html">Portfolio</a></li>
-                <li><a href="file:///C:/Users/hp/Documents/Fynd/Assignments/Assignment3-3.html">Contact</a></li>
+                <li>
+                    <a id="logo" href="Assignment3-1.html">
+                        <img src=".\Images\logo.png" height="20rem" width="20rem" alt="home logo">
+                    </a>
+                </li>
+                <li><a href="#">Home</a></li>
+                <li><a href="Assignment3-2.html">Portfolio</a></li>
+                <li><a href="Assignment3-3.html">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -159,7 +183,7 @@
     </main>
     <hr size="1" width="100%" color="black">
     <footer>
-        &copy; example.com
+        &copy; Bhawana
     </footer>
 </body>
 

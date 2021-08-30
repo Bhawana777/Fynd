@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #navigation-bar li {
+            display: inline;
+            list-style: none;
+        }
+        
+        #navigation-bar ul {
+            padding-inline-start: 0;
+        }
+        
+        .table-bordered {
+            border-collapse: collapse;
+        }
+        
+        .table-bordered,
+        .table-bordered th,
+        .table-bordered td {
+            border: 1px solid black;
+        }
+        
+        .table-bordered td {
+            padding: 15px;
+        }
+        
+        .table-bordered th {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="Assignment_1.html">Home</a>
+        <a href="#">Portfolio</a>
+        <a href="Assignment_1(3).html">Contact</a>
+    </nav>
+    <h1>Example Consulting Pvt.Ltd.</h1>
+    <hr size="1" width="100%" color="black">
+    <h2>Portfolio</h2>
+    <h3>Project 1</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis distinctio dolor itaque excepturi nesciunt error consequuntur esse assumenda dolorum totam ipsa, nisi, vero cumque. Magnam, quibusdam nostrum! Placeat, voluptatum nobis.</p>
+    <h3>Project 2</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dicta natus illo hic voluptates praesentium quas molestiae nihil in fugiat, impedit facere iste, dolor laborum? Vero placeat accusamus dolorum provident!</p>
+    <h2>Plans</h2>
+    <table class="table-bordered">
+        <thead>
+            <tr>
+                <th rowspan="2">Plan</th>
+                <th rowspan="2">Max Cluster Size</th>
+                <th rowspan="2">Cloud Provider</th>
+                <th colspan="2">Price in USD(per node)</th>
+            </tr>
+            <tr>
+                <th>Billed per hour</th>
+                <th>Billed per month</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="3">Free Tier</th>
+                <td>3</td>
+                <td>AWS</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Azure</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>GCP</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <th rowspan="3">Basic</th>
+                <td>15</td>
+                <td>AWS</td>
+                <td>0.10</td>
+                <td>0.05</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Azure</td>
+                <td>0.15</td>
+                <td>0.08</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>GCP</td>
+                <td>0.20</td>
+                <td>0.10</td>
+            </tr>
+            <tr>
+                <th rowspan="3">Pro</th>
+                <td>200</td>
+                <td>AWS</td>
+                <td>0.07</td>
+                <td>0.03</td>
+            </tr>
+            <tr>
+                <td>100</td>
+                <td>Azure</td>
+                <td>0.10</td>
+                <td>0.05</td>
+            </tr>
+            <tr>
+                <td>100</td>
+                <td>GCP</td>
+                <td>0.12</td>
+                <td>0.06</td>
+            </tr>
+        </tbody>
+    </table>
+    <b style="padding-left: 135px;">Hosting Plans and Pricing for various Cloud Services</b>
+    <hr style="margin-left:0" size="1" width="70%" color="black">
+    <footer>
+        &copy; Bhawana
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 70px;
+    overflow: hidden;
+    background-color: rgb(248, 249, 250);
+}
+
+ul.topnav li {
+    float: left;
+}
+
+ul.topnav li a {
+    display: block;
+    color: rgb(134, 135, 135);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {
+    background-color: rgb(238, 238, 238);
+}
+
+ul.topnav li a:focus {
+    background-color: rgb(238, 238, 238);
+}
+
+ul.topnav li.right {
+    float: right;
+}
+
+.nav_ico {
+    display: block;
+    width: 40px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    ul.topnav li.right,
+    ul.topnav li {
+        float: none;
+    }
+}
+
+
+/*This Media Query use for iPad Portrait View*/
+
+
+/*
+@media only screen and (min-width:768px) and (max-width:991px) {
+    ul.topnav li {
+        margin: 0 0 0 15px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .nav_ico {
+        display: none;
+    }
+}
+*/
+
+
+/*This Media Query use for Mobile View*/
+
+
+/*
+@media screen and (max-width: 767px) {
+    .nav_ico {
+        display: block;
+        position: relative;
+        z-index: 10;
+    }
+    ul.topnav li.right,
+    ul.topnav li {
+        position: fixed;
+        left: 0;
+        top: 73px;
+        padding: 0;
+        background: #053e5d;
+        z-index: 5;
+        height: calc(100vh - 74px);
+        width: calc(100% - 80px);
+        transition: all 0.3s ease-out;
+        transform: translateX(-100%);
+    }
+    ul.topnav li.right,
+    ul.topnav li {
+        float: none;
+        margin: 0 !important;
+        padding: 0 !important;
+        border-bottom: 1px solid;
+        text-align: center;
+    }
+    ul.topnav li a {
+        display: block;
+        color: #fff;
+        padding: 10px;
+    }
+    .main_nav:after {
+        content: "";
+        position: absolute;
+        left: 100%;
+        top: 0;
+        height: 100%;
+        width: 0;
+        background: rgba(0, 0, 0, 0.7);
+    }
+    ul.topnav li a:hover:not(.active) {
+        transform: translateX(0%);
+    }
+    .main_nav.active:after {
+        width: 1000%;
+    }
+}
+*/

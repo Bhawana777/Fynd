@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red-s {
+            color: red;
+        }
+        
+        #navigation-bar li {
+            display: inline;
+            list-style: none;
+        }
+        
+        #navigation-bar ul {
+            padding-inline-start: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="Assignment_1.html">Home</a>
+        <a href="Assignment_1(2).html">Portfolio</a>
+        <a href="#">Contact</a>
+    </nav>
+    <h1>Example Consulting Pvt.Ltd.</h1>
+    <hr size="1" width="100%" color="black">
+    <h2>Contact</h2>
+    <p>Phone:
+        <a href=tel:+001-123-456-7890> +001-123-456-7890 </a></p>
+    <p>Email:
+        <a href=mailto:hello@example.com>hello@example.com </a></p>
+    <h2>Drop a message</h2>
+    <p>Please drop a message by filling out this form and we will get back to you within 2 working days.</p>
+    <p>Fields marked with <span class="red-s">*</span> are required</p>
+    <label for="fullname">Your Name<span class="red-s">*</span></label><br>
+    <input type="text" id="fullname" name="fullname" value="John Doe"><br>
+    <label for="mailto">Your Email<span class="red-s">*</span></label><br>
+    <input type="text" id="mailto" name="mailto" value="email@gmail.com"><br><br>
+    <p>What are you looking to build<span class="red-s">*</span></p>
+    <datalist id="build">
+        <option value="--Choose any--">--Choose any--</option>
+        <option value="Blog">Blog</option>
+        <option value="Online">Online Store</option>
+        <option value="Game">Game</option>
+        <option value="Other">Other</option>        
+    </datalist>
+    <div class="form-group">
+        <select name="build">
+            <option value="--Choose any--">--Choose any--</option>
+            <option value="Blog">Blog</option>
+            <option value="Online">Online Store</option>
+            <option value="Game">Game</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+    <p>Platforms you plan to support<span class="red-s">*</span></p>
+    <input type="checkbox" id="platform1" name="platform1" value="Web">
+    <label for="platform1"> Web</label>
+    <input type="checkbox" id="platform2" name="platform2" value="Mobile">
+    <label for="platform2"> Mobile</label>
+    <input type="checkbox" id="platform3" name="platform3" value="Desktop">
+    <label for="platform3"> Desktop</label><br>
+    <p>Message</p>
+    <div class="form-group">
+        <textarea name="message" rows="4" cols="30" minlength="10"></textarea>
+    </div>
+    <input type="reset" value="Reset" />
+    <input type="submit" value="Send message">
+    <hr size="1" width="100%" color="black">
+    <footer>
+        &copy; Bhawana
+    </footer>
+</body>
+
+</html>

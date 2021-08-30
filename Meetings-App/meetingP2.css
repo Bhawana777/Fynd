@@ -1,0 +1,211 @@
+/*body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }*/
+
+.calendar {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-right: 50px;
+}
+
+.calendar-hour {
+    height: 24vw;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 2px;
+    background-color: rgb(115, 199, 213);
+}
+
+
+/*ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            //border: 1px solid black;
+            background-color: white;
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a {
+            display: block;
+            color: #666;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover:not(.active) {
+            border-bottom: 3px solid black;
+            background-color: white;
+        }
+        
+        li a.active {
+            border-bottom: 3px solid red;
+            color: white;
+        }*/
+
+.button {
+    background-color: rgb(24, 162, 184);
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 20px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.flex-container {
+    display: flex;
+    border: 1px solid gray;
+    border-radius: 3px;
+    height: 240px;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-bottom: 0;
+}
+
+.button-2 {
+    background-color: rgb(238, 39, 39);
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 2px 0 5px 0;
+    width: 120px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.button-3 {
+    background-color: rgb(12, 120, 221);
+    border: none;
+    color: white;
+    padding: 8px 10px;
+    padding-right: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 2px 2px;
+    width: 45px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.container {
+    width: 300px;
+    height: 30px;
+    padding-bottom: 10px;
+}
+
+#st-box {
+    float: left;
+    width: 125px;
+    height: 35px;
+    background-color: white;
+}
+
+#rd-box {
+    float: left;
+    width: 80px;
+    height: 35px;
+    background-color: white;
+}
+
+#Search {
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    margin: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+#headings {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#line-hr {
+    color: gray;
+    margin: 3px 0;
+    padding: 0 0;
+    background-color: rgb(115, 199, 213);
+}
+
+#input-textarea {
+    width: 1100px;
+}
+
+.box-borders {
+    border-radius: 4px;
+    border-style: none;
+}
+
+.meeting-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /*border: 1px solid black;*/
+    background-color: white;
+}
+
+.meeting-li {
+    float: left;
+    border-bottom: 1px solid rgb(154, 154, 154);
+}
+
+.meeting-li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.meeting-li a:hover,
+a:active {
+    background-color: white;
+    border-top: 1px solid rgb(154, 154, 154);
+    border-left: 1px solid rgb(154, 154, 154);
+    border-right: 1px solid rgb(154, 154, 154);
+    border-bottom: 1px solid white;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    position: relative;
+    top: 2px;
+}
+
+.active {
+    background-color: white;
+    border-top: 1px solid rgb(154, 154, 154);
+    border-left: 1px solid rgb(154, 154, 154);
+    border-right: 1px solid rgb(154, 154, 154);
+    border-bottom: 1px solid white;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    position: relative;
+    top: 2px;
+}
+
+.foot {
+    text-shadow: 1em gray;
+    text-align: center;
+    padding: 10px;
+}

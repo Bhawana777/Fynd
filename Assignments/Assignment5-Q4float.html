@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        /* Create four equal columns that floats next to each other */
+        
+        .column {
+            float: left;
+            width: 25%;
+            padding: 10px;
+            height: 300px;
+            /* Should be removed. Only for demonstration */
+        }
+        /* Clear floats after the columns */
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Microsoft Equal Columns</h2>
+
+    <div class="row">
+        <div class="column">
+            <img src="1.webp" alt="OneNode">
+            <h2>OneNote</h2>
+            <p>
+                Organise your notes and your life.
+                <br>
+                <a href="https://www.microsoft.com/en-in/">Learn More-></a>
+            </p>
+        </div>
+        <div class="column">
+            <img src="2.webp" alt="OneNode">
+            <h2>Microsoft OneDrive</h2>
+            <p>
+                Save your files and photos to OneDrive and access them from any device, anywhere.
+                <br>
+                <a href="https://www.microsoft.com/en-in/">Learn More-></a>
+            </p>
+        </div>
+        <div class="column">
+            <img src="3.webp" alt="OneNode">
+            <h2>Microsoft 365</h2>
+            <p>
+                Premium Office apps, extra cloud storage, advanced security, and more – all in one convenient subscription.
+                <br>
+                <a href="https://www.microsoft.com/en-in/">For upt ot 6 people-></a>
+            </p>
+        </div>
+        <div class="column">
+            <img src="4.jfif" alt="OneNode">
+            <h2>Xbox Game Pass Ultimate</h2>
+            <p>
+                Get your first month of membership for ₹50. Play on the devices you own. Includes EA Play. Offer available to new subscribers only.
+                <br>
+                <a href="https://www.microsoft.com/en-in/">Join Now-></a>
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Login</title>
+    <script src="https://kit.fontawesome.com/ff9dc5af4a.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Roboto, Arial, sans-serif;
+            position: relative;
+        }
+        
+        .nav-bar {
+            display: flex;
+            width: 100%;
+            background-color: #2874f0;
+            align-items: center;
+            position: fixed;
+            top: 0;
+        }
+        
+        .main-menu {
+            width: 75%;
+            margin: 0% auto;
+            display: flex;
+            align-items: center;
+        }
+        
+        .flip-logo {
+            padding: 0.5% 0.5% 0.5% 15%;
+        }
+        
+        .search {
+            width: 518px;
+            height: 36px;
+            padding: 0px 33px 0px 16px;
+            outline: none;
+            border-radius: 2px 0px 0px 2px;
+            border: none;
+        }
+        /* .nav-bar ul {
+  height: 100%;
+  margin: 0% auto;
+  justify-content: flex-end;
+}
+.nav-bar li {
+  height: 100%;
+  display: inline-block;
+  list-style-type: none;
+} */
+        
+        .nav-bar a {
+            height: 100%;
+            text-decoration: none;
+            color: white;
+            padding: 0.5em 1.2em;
+            font-weight: 500;
+        }
+        
+        .drop-icon {
+            font-size: 0.3em;
+        }
+        
+        .inp-cntr {
+            position: relative;
+        }
+        
+        .inp-cntr i {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 1.5em;
+            padding: 1%;
+            color: #2874f0;
+        }
+        
+        #login {
+            margin: auto 1em;
+            padding: auto 2em;
+            height: 30px;
+            width: 100px;
+            text-align: center;
+            background-color: white;
+            color: #2874f0;
+            font-weight: 700;
+            font-size: 16px;
+            border: none;
+        }
+        
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        
+        .dropdown-content {
+            /* margin-top: 5px; */
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            border-bottom: 1px solid rgb(228, 215, 215);
+            display: block;
+            text-align: left;
+        }
+        
+        .dropdown-content a i {
+            color: hsl(217, 87%, 55%);
+            padding-right: 1em;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h1>Fiexd position Flipkart login</h1> -->
+    <div class="nav-bar">
+        <div class="main-menu">
+            <a href="#" class="flip-logo"><img src="flipcart_logo.jpg" alt="flipkart logo"></a>
+            <div class="inp-cntr">
+                <input type="text" class="search" placeholder="Search for products, brands and more" id="search">
+                <span>
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </span>
+            </div>
+            <!-- <ul class="menu-links"> -->
+            <div class="dropdown">
+                <!-- <li id="login" > -->
+                <div>
+                    <!-- <a   href="#" style="color: #2874f0;">Login</a> -->
+                    <button id="login">Login</button>
+                </div>
+
+                <!-- </li> -->
+
+                <div class="dropdown-content">
+                    <a href="#"> <i class="fa fa-user" aria-hidden="true"></i> My Profile</a>
+                    <a href="#"><i class="fa fa-plus-circle" aria-hidden="true"></i>Flipkart plus zone</a>
+                    <a href="#"><i class="fa fa-first-order" aria-hidden="true"></i>orders</a>
+                    <a href="#"><i class="fa fa-heart" aria-hidden="true"></i> Wishlist</a>
+                    <a href="#"><i class="dropdown-icon fa fa-download" aria-hidden="true"></i>Rewards</a>
+                    <a href="#"><i class="fa fa-credit-card" aria-hidden="true"></i> Gift Cards</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <div class="drop-link">
+                    <a href="#">More 
+                            <span class="drop-icon">
+                                <i class="fa fa-angle-down fa-3x" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                </div>
+
+                <div class="dropdown-content">
+                    <a href="#"> <i class="dropdown-icon fa fa-bell" aria-hidden="true"></i> Notifications</a>
+                    <a href="#"><i class="dropdown-icon fa fa-briefcase" aria-hidden="true"></i>Sell on flipkart</a>
+                    <a href="#"><i class="dropdown-icon fa fa-comments" aria-hidden="true"></i>24 * 7 Customer care</a>
+                    <a href="#"><i class="dropdown-icon fa fa-level-up" aria-hidden="true"></i> Advertise</a>
+                    <a href="#"><i class="dropdown-icon fa fa-download" aria-hidden="true"></i>Download</a>
+                </div>
+            </div>
+            <!-- <li><a href="#"> <i class="fa fa-shopping-cart" aria-hidden="true"> Cart</i></a></li> -->
+            <!--<a href="#"> <i class="fa fa-shopping-cart" aria-hidden="true"> Cart</i></a> -->
+            <a href="#" style="padding-left: 30px;"><img src="flipkart_cart.jpg" alt="flipkart cart"></a>
+            <!-- </ul> -->
+        </div>
+
+    </div>
+    <main>
+        <div>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laborum quo optio laudantium illo earum, est ducimus doloribus ab dolor, deserunt non omnis autem molestias suscipit corporis ullam, deleniti pariatur. Dolorem sequi voluptate quisquam.
+                Enim, molestiae atque! Eius atque at ratione, distinctio eos minima libero, consequatur odit earum quia in reprehenderit et tenetur neque molestiae, nobis exercitationem eveniet molestias quam!
+            </p>
+        </div>
+        <div>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laborum quo optio laudantium illo earum, est ducimus doloribus ab dolor, deserunt non omnis autem molestias suscipit corporis ullam, deleniti pariatur. Dolorem sequi voluptate quisquam.
+                Enim, molestiae atque! Eius atque at ratione, distinctio eos minima libero, consequatur odit earum quia in reprehenderit et tenetur neque molestiae, nobis exercitationem eveniet molestias quam!
+            </p>
+        </div>
+        <div>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laborum quo optio laudantium illo earum, est ducimus doloribus ab dolor, deserunt non omnis autem molestias suscipit corporis ullam, deleniti pariatur. Dolorem sequi voluptate quisquam.
+                Enim, molestiae atque! Eius atque at ratione, distinctio eos minima libero, consequatur odit earum quia in reprehenderit et tenetur neque molestiae, nobis exercitationem eveniet molestias quam!
+            </p>
+        </div>
+        <div>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laborum quo optio laudantium illo earum, est ducimus doloribus ab dolor, deserunt non omnis autem molestias suscipit corporis ullam, deleniti pariatur. Dolorem sequi voluptate quisquam.
+                Enim, molestiae atque! Eius atque at ratione, distinctio eos minima libero, consequatur odit earum quia in reprehenderit et tenetur neque molestiae, nobis exercitationem eveniet molestias quam!
+            </p>
+        </div>
+        <div>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laborum quo optio laudantium illo earum, est ducimus doloribus ab dolor, deserunt non omnis autem molestias suscipit corporis ullam, deleniti pariatur. Dolorem sequi voluptate quisquam.
+                Enim, molestiae atque! Eius atque at ratione, distinctio eos minima libero, consequatur odit earum quia in reprehenderit et tenetur neque molestiae, nobis exercitationem eveniet molestias quam!
+            </p>
+        </div>
+        <div>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laborum quo optio laudantium illo earum, est ducimus doloribus ab dolor, deserunt non omnis autem molestias suscipit corporis ullam, deleniti pariatur. Dolorem sequi voluptate quisquam.
+                Enim, molestiae atque! Eius atque at ratione, distinctio eos minima libero, consequatur odit earum quia in reprehenderit et tenetur neque molestiae, nobis exercitationem eveniet molestias quam!
+            </p>
+        </div>
+        <div>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laborum quo optio laudantium illo earum, est ducimus doloribus ab dolor, deserunt non omnis autem molestias suscipit corporis ullam, deleniti pariatur. Dolorem sequi voluptate quisquam.
+                Enim, molestiae atque! Eius atque at ratione, distinctio eos minima libero, consequatur odit earum quia in reprehenderit et tenetur neque molestiae, nobis exercitationem eveniet molestias quam!
+            </p>
+        </div>
+        <div>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laborum quo optio laudantium illo earum, est ducimus doloribus ab dolor, deserunt non omnis autem molestias suscipit corporis ullam, deleniti pariatur. Dolorem sequi voluptate quisquam.
+                Enim, molestiae atque! Eius atque at ratione, distinctio eos minima libero, consequatur odit earum quia in reprehenderit et tenetur neque molestiae, nobis exercitationem eveniet molestias quam!
+            </p>
+        </div>
+        <div>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laborum quo optio laudantium illo earum, est ducimus doloribus ab dolor, deserunt non omnis autem molestias suscipit corporis ullam, deleniti pariatur. Dolorem sequi voluptate quisquam.
+                Enim, molestiae atque! Eius atque at ratione, distinctio eos minima libero, consequatur odit earum quia in reprehenderit et tenetur neque molestiae, nobis exercitationem eveniet molestias quam!
+            </p>
+        </div>
+        <div>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laborum quo optio laudantium illo earum, est ducimus doloribus ab dolor, deserunt non omnis autem molestias suscipit corporis ullam, deleniti pariatur. Dolorem sequi voluptate quisquam.
+                Enim, molestiae atque! Eius atque at ratione, distinctio eos minima libero, consequatur odit earum quia in reprehenderit et tenetur neque molestiae, nobis exercitationem eveniet molestias quam!
+            </p>
+        </div>
+        <div>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laborum quo optio laudantium illo earum, est ducimus doloribus ab dolor, deserunt non omnis autem molestias suscipit corporis ullam, deleniti pariatur. Dolorem sequi voluptate quisquam.
+                Enim, molestiae atque! Eius atque at ratione, distinctio eos minima libero, consequatur odit earum quia in reprehenderit et tenetur neque molestiae, nobis exercitationem eveniet molestias quam!
+            </p>
+        </div>
+
+    </main>
+</body>
+
+</html>

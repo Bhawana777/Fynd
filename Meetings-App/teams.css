@@ -1,0 +1,114 @@
+.calendar {
+    /*position: relative;*/
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-right: 50px;
+    /*background-color: greenyellow;*/
+}
+
+html * {
+    font-family: Nunito, sans-serif;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    /*background-color: pink;*/
+}
+
+.flex-container>div {
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 330px;
+    height: 330px;
+    margin: 20px;
+    /*background-color: purple;*/
+    padding-left: 20px;
+}
+
+.container {
+    width: 200px;
+    height: 30px;
+    padding-bottom: 10px;
+    /*background-color: lightgoldenrodyellow;*/
+}
+
+#st-box {
+    float: left;
+    width: 80px;
+    height: 35px;
+    background-color: white;
+}
+
+#rd-box {
+    float: right;
+    /*width: 120px;
+    height: 35px;
+    background-color: white;*/
+}
+
+#b-tag {
+    font-weight: bold;
+    margin-left: 120px;
+    padding-bottom: 120px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.button-2 {
+    background-color: rgb(238, 39, 39);
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 2px 2px;
+    width: 120px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.button-3 {
+    background-color: rgb(12, 120, 221);
+    border: none;
+    color: white;
+    padding: 8px 9px;
+    padding-right: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 2px 2px;
+    width: 45px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.foot {
+    text-shadow: 1em gray;
+    text-align: center;
+    padding: 10px;
+}
+
+@media screen and (
+/*max-width: 4000px,*/
+
+max-height: 600px) {
+    .flex-container,
+    .flex-container>div {
+        float: inline-start;
+    }
+}
+
+@media screen and (
+/*min-width: 4000px*/
+
+min-height: 600px) {
+    .flex-container,
+    .flex-container>div {
+        float: inline-start;
+    }
+}
