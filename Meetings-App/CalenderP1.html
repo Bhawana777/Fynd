@@ -9,12 +9,57 @@
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="app-1.css">
     <link rel="stylesheet" href="app-2.css">
-    <link rel="stylesheet" href="menubar.css">
+    <link rel="stylesheet" href="Nav-Bar.css">
+    <script src="https://kit.fontawesome.com/ff9dc5af4a.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
     <nav>
+        <div class="header">
+            <div class="head-menu">
+
+                <h1 class="logo">MyMeetings</h1>
+                <input type="checkbox" name="nav-toggle" id="nav-toggle" class="nav-checked-toggle">
+
+                <div class="nav-bar">
+
+                    <nav class="main-me">
+                        <div class="row">
+
+                            <div class="col col-left">
+                                <ul>
+                                    <li>
+                                        <a href="CalenderP1.html">Calendar</a>
+                                    </li>
+                                    <li>
+                                        <a href="MeetingP1.html">Meetings</a>
+                                    </li>
+                                    <li>
+                                        <a href="TeamsP1.html">Teams</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col col-right">
+                                <ul>
+
+                                    <li id="usr-profile"> <a href="#" class="user-name">Hello &ThickSpace;<span>
+                                            JohnDoe@example.com! </span></a> </li>
+                                    <li id="log-state"><a href="index.html">Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+
+                </div>
+                <label for="nav-toggle" class="nav-toggle-label"><span>
+                <i class="fa fa-bars"></i>
+            </span></label>
+            </div>
+        </div>
+    </nav>
+    <!-- <nav>
         <ul class="topnav">
             <li><a href="CalenderP1.html">Calendar</a></li>
             <li><a href="MeetingP1.html">Meetings</a></li>
@@ -25,8 +70,7 @@
                 </a>
             </li>
         </ul>
-    </nav>
-
+    </nav> -->
     <div class="calendar">
         <h1>Calender</h1>
         <hr />

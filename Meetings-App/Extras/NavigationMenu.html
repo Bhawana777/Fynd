@@ -5,63 +5,211 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="menubar.css">
     <style>
-        .sidenav {
-            height: 100%;
-            width: 0;
+        .head-menu {
+            width: 100%;
+            /* display: flex; */
+            margin: 0 auto;
+        }
+        
+        .logo {
+            width: 100%;
+            margin-top: 0;
+            padding: 0.5rem 0rem;
+            margin-left: 5%;
             position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #111;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 60px;
+            font-weight: 400;
+            font-size: 1.5rem;
+            font-family: Arial, Helvetica, sans-serif;
+            display: inline-block;
+            z-index: 2;
+            /* background-color: var(--grey); */
         }
         
-        .sidenav a {
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 25px;
-            color: #818181;
+        #nav-toggle {
             display: block;
-            transition: 0.3s;
+            visibility: hidden;
         }
         
-        .sidenav a:hover {
-            color: #f1f1f1;
-        }
-        
-        .sidenav .closebtn {
-            position: absolute;
+        .nav-toggle-label {
+            width: 4rem;
+            margin-right: 5%;
+            margin-top: 0;
+            padding: 0.4rem 0rem;
+            position: fixed;
             top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
+            right: 0;
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 100;
+            text-align: center;
+            border: 1px solid var(--dark-white);
+            border-radius: 5px;
+            z-index: 2;
         }
         
-        @media screen and (max-height: 450px) {
-            .sidenav {
-                padding-top: 15px;
+        #nav-toggle:checked~.nav-bar {
+            display: flex;
+        }
+        
+        .nav-bar {
+            width: 100%;
+            margin: 0;
+            padding-top: 1.5em;
+            position: fixed;
+            top: 0;
+            display: none;
+            background-color: var(--grey);
+            z-index: 1;
+        }
+        
+        @media screen and (min-width: 800px) {
+            .logo {
+                display: none;
             }
-            .sidenav a {
-                font-size: 18px;
+            .nav-bar ul.topnav {
+                margin: 0;
+            }
+            ul.topnav li,
+            ul.topnav li.right {
+                margin: 0;
+                padding: 0;
+            }
+            .nav-bar {
+                width: 100%;
+                top: 0;
+                padding-top: 0;
+                /* display: inline-block; */
+                display: flex;
+                flex-flow: row wrap;
+            }
+            ul.topnav {
+                width: 100%;
+                margin: 0 auto;
+                margin-left: 4.3%;
+                /* display: flex;
+    flex-flow: row wrap; */
+            }
+            ul.topnav li {
+                display: flex;
+                justify-content: space-between;
+                margin-right: 9%;
+            }
+            ul.topnav li.right {
+                margin: 0 auto;
+                display: flex;
+                flex-flow: row wrap;
+                list-style-type: none;
+                float: left;
+            }
+            ul.topnav li a {
+                width: auto;
+                padding: 0.8em 0.3em;
+                font-size: 1.2em;
+                text-align: center;
+                border-bottom: none;
+                /* display: flex; */
+            }
+            .nav-toggle-label {
+                display: none;
+            }
+        }
+        
+        @media screen and (min-width: 1000px) {
+            ul.topnav {
+                margin-left: 4%;
+            }
+            ul.topnav li {
+                margin-right: 8%;
+            }
+            ul.topnav li a {
+                padding: 1em 0.5em;
+                font-size: 1.5em;
+            }
+        }
+        
+        @media screen and (min-width: 300px) {
+            .logo {
+                margin-left: 9%;
+            }
+        }
+        
+        @media screen and (min-width: 350px) {
+            .logo {
+                margin-left: 8%;
+            }
+        }
+        
+        @media screen and (min-width: 400px) {
+            .logo {
+                margin-left: 7%;
+            }
+        }
+        
+        @media screen and (min-width: 500px) {
+            .logo {
+                margin-left: 7%;
+            }
+        }
+        
+        @media screen and (min-width: 520px) {
+            .logo {
+                margin-left: 6%;
+            }
+        }
+        
+        @media screen and (min-width: 550px) {
+            .logo {
+                margin-left: 5.7%;
+            }
+        }
+        
+        @media screen and (min-width: 600px) {
+            .logo {
+                margin-left: 5.5%;
+            }
+        }
+        
+        @media screen and (min-width: 720px) {
+            .logo {
+                margin-left: 5%;
+            }
+        }
+        
+        @media screen and (min-width: 800px) {
+            .main-menu {
+                margin-left: 5%;
+                /* 4.3%; */
+            }
+        }
+        
+        @media screen and (min-width: 1000px) {
+            .main-menu {
+                margin-left: 4.3%;
             }
         }
     </style>
 </head>
 
 <body>
+    <div class="head-menu">
 
-    <ul class="topnav">
-        <li><a href="#Calendar">Calendar</a></li>
-        <li><a href="#Meetings">Meetings</a></li>
-        <li><a href="#Teams">Teams</a></li>
-        <li class="right"><a href="#Logout">Logout</a></li>
-        <li class="right">
-            <a href="#Hello">Hello<span style="color: rgb(56,174,193);"> jane.deo@example.com</span>
+        <h1 class="logo">MyMeetings</h1>
+        <input type="checkbox" name="nav-toggle" id="nav-toggle" class="nav-checked-toggle">
+
+        <div class="nav-bar">
+            <ul class="topnav">
+                <li><a href="#Calendar">Calendar</a></li>
+                <li><a href="#Meetings">Meetings</a></li>
+                <li><a href="#Teams">Teams</a></li>
+                <li class="right"><a href="#Logout">Logout</a></li>
+                <li class="right">
+                    <a href="#Hello">Hello<span style="color: rgb(56,174,193);"> jane.deo@example.com</span>
             </a>
-        </li>
-    </ul>
+                </li>
+            </ul>
+        </div>
+        <label for="nav-toggle" class="nav-toggle-label"><span><i class="fa fa-bars"></i></span></label>
+    </div>
 
 
 

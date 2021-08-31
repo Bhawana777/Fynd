@@ -7,13 +7,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meetings-App</title>
     <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="menubar.css">
+    <link rel="stylesheet" href="Nav-Bar.css">
     <link rel="stylesheet" href="meetingP2.css">
+    <script src="https://kit.fontawesome.com/ff9dc5af4a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <nav>
-        <ul class="topnav">
+        <div class="header">
+            <div class="head-menu">
+
+                <h1 class="logo">MyMeetings</h1>
+                <input type="checkbox" name="nav-toggle" id="nav-toggle" class="nav-checked-toggle">
+
+                <div class="nav-bar">
+
+                    <nav class="main-me">
+                        <div class="row">
+
+                            <div class="col col-left">
+                                <ul>
+                                    <li>
+                                        <a href="CalenderP1.html">Calendar</a>
+                                    </li>
+                                    <li>
+                                        <a href="MeetingP1.html">Meetings</a>
+                                    </li>
+                                    <li>
+                                        <a href="TeamsP1.html">Teams</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col col-right">
+                                <ul>
+
+                                    <li id="usr-profile"> <a href="#" class="user-name">Hello &ThickSpace;<span>
+                                                JohnDoe@example.com! </span></a> </li>
+                                    <li id="log-state"><a href="index.html">Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+
+                </div>
+                <label for="nav-toggle" class="nav-toggle-label"><span>
+                    <i class="fa fa-bars"></i>
+                </span></label>
+            </div>
+        </div>
+        <!-- <ul class="topnav">
             <li><a href="CalenderP1.html">Calendar</a></li>
             <li><a href="MeetingP2.html">Meetings</a></li>
             <li><a href="TeamsP1.html">Teams</a></li>
@@ -22,16 +65,22 @@
                 <a href="#Hello">Hello<span style="color: rgb(56,174,193);"> jane.deo@example.com</span>
                 </a>
             </li>
-        </ul>
+        </ul> -->
     </nav>
     <div class="calendar">
         <h1>Meetings</h1>
         <hr style="background-color: rgb(154,154,154);" />
-        <ul class="meeting-ul">
+        <ul class="links">
+            <li class="link srch-meet" style="border:1px solid grey; 
+            border-bottom: 1px solid white; border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            "> <a href="MeetingP2.html">Filter/ Search meetings</a> </li>
+            <li class="link add-meet "> <a href="MeetingP1.html">Add a meeting</a> </li>
+        </ul>
+        <!-- <ul class="meeting-ul">
             <li class="meeting-li"><a href="MeetingP2.html" class="active">Filter / Search a meeting</a></li>
             <li class="meeting-li"><a href="MeetingP1.html">Add a meeting</a></li>
-        </ul>
-        <hr style="margin-top: -3px; width: 884px; float: right;" />
+        </ul> -->
         <div class="calendar-hour">
             <p id="Search">Search for meetings</p>
             <hr style="color: rgb(154,154,154); border-bottom-color: lightskyblue;" />

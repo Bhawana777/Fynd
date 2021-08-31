@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/ff9dc5af4a.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .header {
+            width: 100%;
+            background-color: rgb(248, 249, 250);
+            height: 45px;
+            position: fixed;
+            padding-bottom: 0.4rem;
+            top: 0;
+            z-index: 2;
+        }
+        
+        .head-menu {
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            width: 100%;
+            margin-top: 0;
+            padding: 0.5rem 0rem;
+            margin-left: 5%;
+            position: fixed;
+            font-weight: 400;
+            font-size: 1.5rem;
+            font-family: Arial, Helvetica, sans-serif;
+            display: inline-block;
+            z-index: 2;
+        }
+        
+        #nav-toggle {
+            display: block;
+            visibility: hidden;
+        }
+        
+        .nav-toggle-label {
+            width: 4rem;
+            margin-right: 5%;
+            margin-top: 0;
+            padding: 0.4rem 0rem;
+            position: fixed;
+            top: 0;
+            right: 0;
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 100;
+            text-align: center;
+            border: 1px solid gray;
+            border-radius: 5px;
+            z-index: 2;
+        }
+        
+        #nav-toggle:checked~.nav-bar {
+            display: flex;
+        }
+        
+        .col-right {
+            margin-top: 0;
+            padding-top: 0;
+        }
+        
+        .col-left ul {
+            margin-top: 1.5rem;
+            margin-bottom: 0;
+            padding-left: 0;
+        }
+        
+        .col-right ul {
+            margin: 0 auto;
+            padding-left: 0;
+        }
+        
+        .nav-bar {
+            width: 100%;
+            margin: 0;
+            padding-top: 25px;
+            height: 45px;
+            position: fixed;
+            top: 0;
+            display: none;
+            background-color: rgb(248, 249, 250);
+            z-index: 1;
+        }
+        
+        .main-menu {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            flex: 1 0 100%;
+            height: 45px;
+        }
+        
+        .nav-bar li {
+            display: flex;
+            list-style-type: none;
+            text-align: left;
+        }
+        
+        .nav-bar li a {
+            width: 100%;
+            margin-top: 0px;
+            padding: 14px 16px;
+            height: 45px;
+            text-decoration: none;
+            display: flex;
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(134, 135, 135);
+            opacity: unset;
+        }
+        
+        .nav-bar li a:hover,
+        a:active {
+            opacity: 1;
+            background-color: rgb(238, 238, 238);
+        }
+        
+        .nav-bar li a span {
+            color: lightskyblue;
+        }
+        
+        @media screen and (min-width: 800px) {
+            .logo {
+                display: none;
+            }
+            .nav-bar ul {
+                margin: 0;
+            }
+            .row,
+            .col {
+                margin: 0;
+                padding: 0;
+            }
+            .nav-bar {
+                width: 100%;
+                top: 0;
+                padding-top: 0;
+                display: flex;
+                flex-flow: row wrap;
+            }
+            .main-menu {
+                width: 100%;
+                margin: 0 auto;
+                margin-left: 4.3%;
+            }
+            .row {
+                display: flex;
+                justify-content: space-between;
+                margin-right: 9%;
+            }
+            .nav-bar li {
+                margin: 0 auto;
+                display: flex;
+                flex-flow: row wrap;
+                list-style-type: none;
+                float: left;
+            }
+            .nav-bar li a {
+                width: auto;
+                padding: 14px 16px;
+                font-size: 16px;
+                text-align: center;
+                border-bottom: none;
+            }
+            .nav-toggle-label {
+                display: none;
+            }
+        }
+        
+        @media screen and (min-width: 1000px) {
+            .main-menu {
+                margin-left: 4%;
+            }
+            .row {
+                margin-right: 8%;
+            }
+            .nav-bar li a {
+                padding: 14px 16px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="head-menu">
+
+            <h1 class="logo">MyMeetings</h1>
+            <input type="checkbox" name="nav-toggle" id="nav-toggle" class="nav-checked-toggle">
+
+            <div class="nav-bar">
+
+                <nav class="main-menu">
+                    <div class="row">
+
+                        <div class="col col-left">
+                            <ul>
+                                <li>
+                                    <a href=".\index.html">Calendar</a>
+                                </li>
+                                <li>
+                                    <a href=".\meeting.html">Meetings</a>
+                                </li>
+                                <li>
+                                    <a href=".\Team.html">Teams</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="col col-right">
+                            <ul>
+
+                                <li id="usr-profile"> <a href="#" class="user-name">Hello &ThickSpace;<span>
+                                            JohnDoe@example.com! </span></a> </li>
+                                <li id="log-state"><a href="#">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+            <label for="nav-toggle" class="nav-toggle-label"><span>
+                <i class="fa fa-bars"></i>
+            </span></label>
+        </div>
+    </div>
+</body>
+
+</html>

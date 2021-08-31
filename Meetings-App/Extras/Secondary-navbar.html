@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .links {
+            width: 99%;
+            margin: 1rem auto;
+            padding-left: 0;
+            display: inline-block;
+            border-bottom: 1px solid rgb(172, 170, 170);
+            display: flex;
+            flex-flow: row wrap;
+        }
+        
+        .links li {
+            list-style-type: none;
+            margin-left: 0rem;
+            display: flex;
+            position: relative;
+            top: 1px;
+        }
+        
+        .links li a {
+            text-decoration: none;
+            padding: 0.5rem 0.8rem;
+            font-size: small;
+        }
+        
+        @media screen and (min-width: 800px) {
+            .links li a {
+                font-size: small;
+                padding: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <nav class="meetings-menu"> -->
+    <ul class="links">
+        <li class="link srch-meet"> <a href=".\filter_meeting.html">Filter/ Search meetings</a> </li>
+        <li class="link add-meet " style="border:1px solid grey; 
+        border-bottom: 1px solid white; border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            "> <a href=".\meeting.html">Add a meeting</a> </li>
+    </ul>
+
+</body>
+
+</html>
