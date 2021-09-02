@@ -1,56 +1,55 @@
-.calendar {
-    position: relative;
-    align-content: flex-end;
-    margin-top: 80px;
-    margin-bottom: 20px;
-    margin-left: 100px;
-    margin-right: 50px;
-}
-
-.calendar-hour {
-    height: 50vw;
-    margin-top: 10px;
-    border-radius: 5px;
-    background-color: lightskyblue;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-}
-
-.links {
-    width: 99%;
-    margin: 1rem auto;
-    padding-left: 0;
-    display: inline-block;
-    border-bottom: 1px solid rgb(172, 170, 170);
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.links li {
-    list-style-type: none;
-    margin-left: 0rem;
-    display: flex;
-    position: relative;
-    top: 1px;
-}
-
-.links li a {
-    text-decoration: none;
-    padding: 0.5rem 0.8rem;
-    font-size: small;
-    color: black;
-}
-
-@media screen and (min-width: 800px) {
-    .links li a {
-        font-size: small;
-        padding: 1em;
-    }
-}
-
-
-/*.meeting-ul {
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .calendar {
+            position: relative;
+            align-content: flex-end;
+            margin-top: 80px;
+            margin-bottom: 20px;
+            margin-left: 100px;
+            margin-right: 50px;
+        }
+        
+        .calendar-hour {
+            height: 640px;
+            margin-top: 10px;
+            border-radius: 5px;
+            background-color: lightskyblue;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+        }
+        
+        .links {
+            width: 99%;
+            margin: 1rem auto;
+            padding-left: 0;
+            display: inline-block;
+            border-bottom: 1px solid rgb(172, 170, 170);
+            display: flex;
+            flex-flow: row wrap;
+        }
+        
+        .links li {
+            list-style-type: none;
+            margin-left: 0rem;
+            display: flex;
+            position: relative;
+            top: 1px;
+        }
+        
+        .links li a {
+            text-decoration: none;
+            padding: 0.5rem 0.8rem;
+            /*font-size: small;*/
+            color: black;
+        }
+        /*.meeting-ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -97,80 +96,110 @@ a:active {
     position: relative;
     top: 2px;
 }*/
-
-.container {
-    width: 240px;
-    height: 40px;
-    background-color: lightskyblue;
-}
-
-#st-box {
-    float: left;
-    width: 85px;
-    height: 35px;
-    background-color: lightskyblue;
-}
-
-#rd-box {
-    float: left;
-    width: 80px;
-    height: 35px;
-    background-color: lightskyblue;
-}
-
-.button {
-    background-color: rgb(24, 162, 184);
-    border: none;
-    color: white;
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 17px;
-    margin: 2px 2px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-#sep-p {
-    display: inherit;
-    margin: 2px 0;
-    padding: 2px;
-    width: 20px;
-    height: 20px;
-}
-
-#Search {
-    font-size: 30px;
-    font-weight: 600;
-    color: white;
-    margin: 10px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-}
-
-#date-email-input {
-    width: 1100px;
-    /*min-width: 600px;*/
-    height: 40px;
-}
-
-#input-textarea {
-    width: 1100px;
-}
-
-#headings {
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-.box-borders {
-    border-radius: 4px;
-    border-style: none;
-}
-
-.foot {
-    text-shadow: 1em gray;
-    text-align: center;
-    padding: 10px;
-}
+        
+        .container {
+            width: 200px;
+            height: 40px;
+            background-color: lightskyblue;
+        }
+        
+        #st-box {
+            float: left;
+            width: 85px;
+            height: 35px;
+            background-color: lightskyblue;
+        }
+        
+        #rd-box {
+            float: left;
+            width: 80px;
+            height: 35px;
+            background-color: lightskyblue;
+        }
+        
+        .button {
+            background-color: rgb(24, 162, 184);
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 17px;
+            margin: 2px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        
+        #sep-p {
+            display: inherit;
+            margin: 2px 0;
+            padding: 2px;
+            width: 20px;
+            height: 20px;
+        }
+        
+        #Search {
+            font-size: 30px;
+            font-weight: 600;
+            color: white;
+            margin: 10px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+        }
+        
+        #date-email-input {
+            width: 100%;
+            /*min-width: 600px;*/
+            height: 40px;
+            display: flex;
+            flex-flow: row wrap;
+        }
+        
+        #input-textarea {
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+        }
+        
+        #headings {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .box-borders {
+            border-radius: 4px;
+            border-style: none;
+        }
+        
+        .foot {
+            text-shadow: 1em gray;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        @media screen and (max-width: 800px) {
+            .calendar {
+                font-size: small;
+                padding: 1em;
+                margin-top: 30px;
+                margin-bottom: 4px;
+                margin-right: 4px;
+                margin-left: 40px;
+            }
+            .links li a {
+                font-size: small;
+                padding: 1em;
+            }
+        }
+        
+        @media screen and (max-width: 375px) {
+            .calendar {
+                padding: 1em;
+                margin: 30px 4px 4px 4px;
+            }
+            .links li a {
+                font-size: small;
+                padding: 1em;
+            }
+        }

@@ -160,11 +160,35 @@
     outline: none;
     border: 1px solid rgb(167, 167, 167);
     border-radius: 5px;
+    padding: 1em;
 }
 
 @media (min-width: 768px) {
     .date-picker input {
         width: 200px;
-        padding: 0.5em
+        padding: 1em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .calendar {
+        font-size: small;
+        padding: 1em;
+        margin-top: 30px;
+        margin-bottom: 4px;
+        margin-right: 4px;
+        margin-left: 40px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .calendar {
+        padding: 1em;
+        margin: 30px 4px 4px 4px;
+    }
+    .date-picker input {
+        width: 190px;
+        margin-left: 20px;
+        padding: 1em;
     }
 }

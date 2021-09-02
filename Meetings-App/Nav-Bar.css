@@ -116,6 +116,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(134, 135, 135);
     opacity: unset;
+    background-color: rgb(248, 249, 250);
 }
 
 .nav-bar li a:hover,
@@ -147,11 +148,13 @@ a:active {
         padding-top: 0;
         display: flex;
         flex-flow: row wrap;
+        background-color: rgb(248, 249, 250);
     }
     .main-me {
         width: 100%;
         margin: 0 auto;
         margin-left: 4.3%;
+        background-color: rgb(248, 249, 250);
     }
     .row {
         display: flex;
@@ -165,6 +168,7 @@ a:active {
         flex-flow: row wrap;
         list-style-type: none;
         float: left;
+        background-color: rgb(248, 249, 250);
     }
     .nav-bar li a {
         width: auto;
@@ -172,6 +176,7 @@ a:active {
         font-size: 16px;
         text-align: center;
         border-bottom: none;
+        background-color: rgb(248, 249, 250);
     }
     .nav-toggle-label {
         display: none;

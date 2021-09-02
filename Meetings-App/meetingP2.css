@@ -1,5 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .calendar {
@@ -12,7 +16,7 @@ body {
 }
 
 .calendar-hour {
-    height: 24vw;
+    height: 340px;
     margin-top: 10px;
     border-radius: 5px;
     padding-left: 20px;
@@ -44,13 +48,6 @@ body {
     padding: 0.5rem 0.8rem;
     font-size: small;
     color: black;
-}
-
-@media screen and (min-width: 800px) {
-    .links li a {
-        font-size: small;
-        padding: 1em;
-    }
 }
 
 
@@ -182,12 +179,16 @@ body {
 }
 
 #input-textarea {
-    width: 1100px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .box-borders {
     border-radius: 4px;
     border-style: none;
+    display: flex;
+    flex-flow: row wrap;
 }
 
 
@@ -242,4 +243,30 @@ a:active {
     text-shadow: 1em gray;
     text-align: center;
     padding: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    .calendar {
+        font-size: small;
+        padding: 1em;
+        margin-top: 30px;
+        margin-bottom: 4px;
+        margin-right: 4px;
+        margin-left: 40px;
+    }
+    .links li a {
+        font-size: small;
+        padding: 1em;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .calendar {
+        padding: 1em;
+        margin: 30px 4px 4px 4px;
+    }
+    .links li a {
+        font-size: small;
+        padding: 1em;
+    }
 }

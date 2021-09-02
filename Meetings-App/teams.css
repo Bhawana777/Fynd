@@ -9,7 +9,7 @@
 }
 
 html * {
-    font-family: Nunito, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .flex-container {
@@ -45,8 +45,8 @@ html * {
 #rd-box {
     float: right;
     /*width: 120px;
-    height: 35px;
-    background-color: white;*/
+height: 35px;
+background-color: white;*/
 }
 
 #b-tag {
@@ -95,21 +95,35 @@ html * {
 }
 
 @media screen and (
-/*max-width: 4000px,*/
+/*min-width: 4000px*/
 
-max-height: 600px) {
+min-height: 500px) {
     .flex-container,
     .flex-container>div {
         float: inline-start;
     }
 }
 
-@media screen and (
-/*min-width: 4000px*/
+@media screen and (max-width: 800px) {
+    .calendar {
+        font-size: small;
+        padding: 1em;
+        margin-top: 30px;
+        margin-bottom: 4px;
+        margin-right: 4px;
+        margin-left: 40px;
+    }
+}
 
-min-height: 600px) {
-    .flex-container,
+@media screen and (max-width: 375px) {
+    .calendar {
+        padding: 1em;
+        margin: 20px 4px 4px 4px;
+    }
+    .flex-container {
+        margin-left: 0;
+    }
     .flex-container>div {
-        float: inline-start;
+        margin-left: 0;
     }
 }

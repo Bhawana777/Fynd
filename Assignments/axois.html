@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img-workshop {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="table-workshops">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+
+    <script>
+        console.log(axios);
+
+        function populateWorkshops(workshops) {
+            const tbody = document.querySelector('#table-workshops tbody');
+
+            tbody.innerHTML = '';
+            workshops.forEach(workshop => {
+                tbody.innerHTML += `
+                        <tr>
+                            <td>
+                                <img src="${workshop.imageUrl}" alt="${workshop.name}" class="img-workshop" />
+                            </td>
+                            <td>${workshop.name}</td>
+                            <td>${workshop.location.city}</td>
+                        </tr>
+                    `;
+            });
+        }
+
+        // axios.get(), axios.post(), axios.put(), axios.delete()
+        axios.get(`https://workshops-server.herokuapp.com/workshops`)
+            .then(response => response.data)
+            .then(data => {
+                populateWorkshops(data);
+            })
+            .catch(error => console.log(error.message));
+    </script>
+</body>
+
+</html>
