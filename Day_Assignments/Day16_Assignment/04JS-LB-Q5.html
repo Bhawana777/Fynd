@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04JS-LB-Q5</title>
+</head>
+
+<body>
+    <h3>Also, Answer present in console as well</h3>
+    <div>const numbers = [25, 65, 35, 75, 45];</div>
+    <button id="btn">Get Answer</button>
+    <div id="result">Result:</div>
+    <script>
+        const btn = document.querySelector('#btn');
+        const result = document.querySelector('#result');
+
+        const numbers = [25, 65, 35, 75, 45];
+        btn.addEventListener('click', (event) => {
+            let max = Math.max(...numbers);
+            result.innerHTML += max;
+        });
+
+        console.log(Math.max(...numbers));
+    </script>
+</body>
+
+</html>

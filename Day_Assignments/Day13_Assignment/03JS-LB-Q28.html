@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03JS-LB-Q28</title>
+</head>
+
+<body>
+    <main>
+        <p id="p-tag">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, quos.</p>
+        <form id="form">
+            <input style="display:block" id="input" type="text" minlength="8">
+            <button id="submit-btn" type="submit">Submit</button>
+        </form>
+    </main>
+    <script>
+        const ptag = document.querySelector('#p-tag');
+        const input = document.querySelector('#input');
+        const button = document.querySelector('#submit-btn');
+        const form = document.querySelector('#form');
+
+        ptag.addEventListener('click', event => {
+            alert(ptag.innerHTML);
+        })
+
+        input.addEventListener('keyup', function(event) {
+            if (input.value.length >= 8) {
+                input.setAttribute('style', 'background-color:lightgreen');
+            } else {
+                input.setAttribute('style', 'background-color:initial');
+            }
+
+        });
+
+
+
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            if (input.value.length >= 8) {
+                form.submit()
+            } else {
+                let errormessage = document.createElement('p');
+                errormessage.appendChild(document.createTextNode('Input should contain minimum of 8 characters'));
+                errormessage.setAttribute('style', 'color:red');
+                input.parentNode.insertBefore(errormessage, input.nextSibling);
+
+            }
+
+        });
+    </script>
+</body>
+
+</html>

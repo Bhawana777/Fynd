@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .message {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script type="module">
+        import Vue from './vue.esm.browser.js'; const WeatherReport = { props: { city: String, rainfall: Number, min_temperature: Number, max_temperature: Number }, template: `
+        <div class="weather">
+            <h2>{{city}}</h2>
+            <hr />
+            <p>
+                Rainfall: {{rainfall}} mm
+            </p>
+            <p>Min-Temperature: {{min_temperature}} Celsius</p>
+            <p>Max-Temperature: {{max_temperature}} Celsius</p>
+        </div>
+        ` }; new Vue({ el: '#app', components: { WeatherReport }, data: { city: 'Mumbai', rainfall: 20, min_temperature: 30, max_temperature: 35 }, /* both :prop="value" and v-bind:prop="value" do the same thing but :prop="value" is easy to easy */ template:
+        `
+        <weather-report :city="city" v-bind:rainfall="rainfall" v-bind:min_temperature="min_temperature" v-bind:max_temperature="max_temperature" /> ` });
+    </script>
+</body>
+
+</html>

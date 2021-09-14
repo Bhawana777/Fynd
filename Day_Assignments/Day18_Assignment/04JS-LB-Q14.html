@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04JS-LB-Q14</title>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+
+    <script>
+        function getCommentersEmailIds(username) {
+            axios.get(`https://jsonplaceholder.typicode.com/users?username=` + username)
+                .then(response => response.data[0].id)
+                .then(response2 => {
+                    return axios.get(`https://jsonplaceholder.typicode.com/users/${response2}/posts`);
+                })
+                .then(response3 => response3.data[0].id)
+                .then(response4 => {
+                    return axios.get(`https://jsonplaceholder.typicode.com/comments?postId=${response4}`)
+                })
+                .then(response5 => {
+                    return response5.data.map((comment => comment.email));
+                })
+                .then(result6 => console.log(result6))
+                .catch(error => console.log(error.message));
+        }
+
+        getCommentersEmailIds('Bret');
+    </script>
+
+    <body>
+        <h1>Open console </h1>
+        <h2>Retrieve users with a particular username</h2>
+    </body>
+</body>
+
+</html>

@@ -28,6 +28,7 @@ https://stackoverflow.com/questions/18543776/why-is-my-css-not-updating-in-web-b
 
 https://www.youtube.com/watch?v=yz7nYlnXLfE
 
+<<<<<<< HEAD
 https://2ality.com/2011/09/currying-vs-part-eval.html
 
 https://stackoverflow.com/questions/25320356/can-i-have-my-github-pages-index-html-in-a-subfolder-of-the-repository
@@ -39,3 +40,6 @@ https://www.geeksforgeeks.org/javascript-promises/
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then
 
 https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e77261
+=======
+https://2ality.com/2011/09/currying-vs-part-eval.html
+>>>>>>> 700b1267c28624719e7978066e274643540bbc03

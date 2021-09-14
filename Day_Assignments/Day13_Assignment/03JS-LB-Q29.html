@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03JS-LB-Q29</title>
+    <style>
+        .panel {
+            margin: 30px 30px;
+            border-style: double;
+        }
+        
+        .panel-header,
+        .panel-content {
+            padding: 1rem;
+        }
+        
+        .panel-header {
+            background-color: blue;
+            cursor: pointer;
+        }
+        
+        .hide {
+            /* visibility: hidden;
+        opacity: 0;
+        transition: visibility 1s, opacity 0.5s linear; */
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="panel">
+        <div class="panel-header">Panel 1</div>
+        <div class="panel-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non odio ullam explicabo molestiae sunt inventore nobis impedit voluptate quibusdam repellendus vero cumque quod, labore dolores obcaecati quas, itaque quae laudantium!
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-header">Panel 2</div>
+        <div class="panel-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non odio ullam explicabo molestiae sunt inventore nobis impedit voluptate quibusdam repellendus vero cumque quod, labore dolores obcaecati quas, itaque quae laudantium!
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-header">Panel 3</div>
+        <div class="panel-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non odio ullam explicabo molestiae sunt inventore nobis impedit voluptate quibusdam repellendus vero cumque quod, labore dolores obcaecati quas, itaque quae laudantium!
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-header">Panel 4</div>
+        <div class="panel-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non odio ullam explicabo molestiae sunt inventore nobis impedit voluptate quibusdam repellendus vero cumque quod, labore dolores obcaecati quas, itaque quae laudantium!
+        </div>
+    </div>
+
+    <script>
+        const panelHeader = document.querySelectorAll('.panel-header');
+
+        panelHeader.forEach((index, element) => {
+            panelHeader[element].addEventListener('click', function() {
+                // console.log(this);
+                this.nextElementSibling.classList.toggle('hide');
+            });
+        });
+    </script>
+</body>
+
+</html>

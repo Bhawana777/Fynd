@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script type="module">
+        import Vue from './vue.esm.browser.js'; new Vue({ el: '#app', template: `
+        <div>
+            <select @change="setSelectedPerson">
+        <option v-for="person in persons" :value="person.nickname">{{person.name}}</option>
+        </select>
+            <p>You selected {{selectedPerson}}</p>
+            <button @click="deletePerson">Delete person</button>
+            <p v-if="deletedPerson">You have deleted {{deletedPerson}}</p>
+            <ul>
+                <li v-for="person in persons" v-bind:key="person.id">
+                    {{person.name}} ({{person.age}})
+                </li>
+            </ul>
+        </div>
+        `, data: { selectedPerson: 'Johnny', selectedIndex: 0, deletedPerson: '', persons: [ { id: 1, name: 'John', age: 32, nickname: 'Johnny' }, { id: 2, name: 'Jane', age: 28,nickname:'Jenna' }, { id: 3, name: 'Mark', age: 40, nickname:'Marky' }, { id: 4,
+        name: 'Mary', age: 44, nickname:'Mary' } ] }, methods: { setSelectedPerson(event){ this.selectedPerson = event.target.value; }, deletePerson() { this.deletedPerson = this.persons[this.selectedIndex].name; this.persons.splice( this.selectedIndex,
+        1 ); } } });
+    </script>
+</body>
+
+</html>

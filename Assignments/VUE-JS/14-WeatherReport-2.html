@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .message {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script type="module">
+        import Vue from './vue.esm.browser.js'; const WeatherReport = { props: { city: String, rainfall: Number, tomorrowRainfall: Number, dayAfterTomorrowRainfall: Number, date: String, temperature: { type: Object, /*tObj is the value passed to the temperature
+        prop // the validator function should return a boolean*/ validator( tObj ) { return typeof tObj.min === 'number' && typeof tObj.max === 'number'; } } }, computed: { averageNextTwoDaysRainfall() { /*"30" + "40" = "3040" (string concatenation) //
+        30 + 40 = 70 (addition)*/ return ( this.tomorrowRainfall + this.dayAfterTomorrowRainfall ) / 2; } }, template: `
+        <div class="weather">
+            <h2>{{city}}</h2>
+            <hr />
+            <p>
+                Weather on {{date}}
+                <br /> Min Temperature is {{temperature.min}}
+                <br /> Max Temperature is {{temperature.max}}
+                <br /> Rainfall: {{rainfall}} mm
+                <br /> Average rainfall predicted over next 2 days = {{averageNextTwoDaysRainfall}} mm
+            </p>
+        </div>
+        ` }; new Vue({ el: '#app', components: { /*WeatherReport: WeatherReport is same as below*/ WeatherReport }, data: { city: 'Mumbai', rainfall: 20, temperature: { min: 20, max: 'Thirty' } }, /* both :prop="value" and v-bind:prop="value" do the same thing
+        but :prop="value" is easy to easy */ /* when you pas */ template: `
+        <weather-report date="Sep 8, 2021" :tomorrowRainfall="30" :dayAfterTomorrowRainfall="40" :city="city" v-bind:rainfall="rainfall" :nextFiveDaysRainfall="[ 30, 40, 50, 60, 70 ]" :temperature="temperature" /> ` });
+    </script>
+</body>
+
+</html>

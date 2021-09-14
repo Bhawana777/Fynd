@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03JS-LB-Q30</title>
+</head>
+
+<body>
+    <input type="number" name="firstValue" id="firstValue" />
+    <select name="operator" id="operator">
+      <option value="add" selected="">+</option>
+      <option value="subtract">-</option>
+      <option value="multiply">*</option>
+      <option value="divide">/</option>
+    </select>
+    <input type="number" name="secondValue" id="secondValue" />
+    <span id="result"></span>
+    <br />
+    <input type="submit" value="Calculate" id="submit" />
+    <script>
+        const submit = document.querySelector('#submit');
+        const firstValue = document.querySelector('#firstValue');
+        const secondValue = document.querySelector('#secondValue');
+        const operator = document.querySelector('#operator');
+        const result = document.querySelector('#result');
+
+        const calculate = () => {
+            if (operator.value === 'add') {
+                result.innerText =
+                    Number(firstValue.value) + Number(secondValue.value);
+            }
+            if (operator.value === 'subtract') {
+                result.innerText =
+                    Number(firstValue.value) - Number(secondValue.value);
+            }
+            if (operator.value === 'multiply') {
+                result.innerText =
+                    Number(firstValue.value) * Number(secondValue.value);
+            }
+            if (operator.value === 'divide') {
+                result.innerText =
+                    Number(firstValue.value) / Number(secondValue.value);
+            }
+        };
+
+        submit.addEventListener('click', calculate);
+        operator.addEventListener('change', calculate);
+    </script>
+</body>
+
+</html>

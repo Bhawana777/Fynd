@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            padding: 1em;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script type="module">
+        import Vue from './vue.esm.browser.js'; const ChildComponent = { props: [ 'counter' ], template: `
+        <div class="box">
+            <div>Counter value (in child) is {{counter.value}}</div>
+            <button @click="incrCounter">Increase counter</button>
+        </div>
+        `, methods: { incrCounter() { this.counter.value++; } } } 
+const ParentComponent = { components: { ChildComponent }, data() { return { counter: { value: 0 } }; }, template: `
+        <div class="box">
+            <div>Counter value (in parent) is {{counter.value}}</div>
+            <child-component :counter="counter" />
+        </div>
+        ` } 
+new Vue({ el: '#app', components: { ParentComponent }, template: `
+        <parent-component /> ` });
+    </script>
+</body>
+
+</html>

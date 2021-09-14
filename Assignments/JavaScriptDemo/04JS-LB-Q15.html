@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04JS-LB-Q15</title>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+
+    <script>
+        async function getCommentersEmailIds(username) {
+            let result;
+            try {
+                result = await axios.get(`https://jsonplaceholder.typicode.com/users?username=` + username);
+                result = await axios.get(`https://jsonplaceholder.typicode.com/users/${result.data[0].id}/posts`);
+                result = await axios.get(`https://jsonplaceholder.typicode.com/comments?postId=${result.data[0].id}`)
+                result = result.data.map((comment => comment.email));
+            } catch (error) {
+                console.log(error.message)
+            }
+            return result;
+        }
+
+        getCommentersEmailIds('Bret')
+            .then(emails => console.log('Email Ids of commentors are', emails))
+            .catch(error => error.message);
+    </script>
+
+    <body>
+        <h1>Open console </h1>
+        <h2>Rewrite the exercise in the previous function using async-await.</h2>
+    </body>
+</body>
+
+</html>

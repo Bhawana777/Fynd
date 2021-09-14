@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04JS-LB-Q7</title>
+</head>
+
+<body>
+    <h3>
+        Open Console
+    </h3>
+    <hr />
+    <div>
+        <h4>When to use an arrow function</h4>
+        <p>
+            In classic function expressions, the this keyword is bound to different values based on the context in which it is called. With arrow functions however, this is lexically bound. It means that it usesthis from the code that contains the arrow function
+        </p>
+        <p>
+            Eg: var obj = { id: 42, counter: function counter() { setTimeout(function() { console.log(this.id); }.bind(this), 1000); } };
+        </p>
+        <p>
+            In the ES5 example, .bind(this) is required to help pass the this context into the function. Otherwise, by default this would be undefined.
+        </p>
+        <p>
+            ES6 arrow functions can’t be bound to a this keyword, so it will lexically go up a scope, and use the value of this in the scope in which it was defined.
+        </p>
+    </div>
+    <div>
+        <h4>When NOT to use an arrow function</h4>
+        <p>Eg: let cat={ lives:9, jumps:()=>{ this.lives--; } }</p>
+        <p>
+            In this case, lives would not deduct as this is not bound to the cat or any object in this case, but will inherit the value of this from the parent scope
+        </p>
+    </div>
+    <hr />
+    <script>
+        const john = {
+            name: 'John',
+            age: 32,
+            celebrateBirthday() {
+                const wishJohn = () => {
+                    console.log(`Happy birthday ${this.name}`);
+                };
+
+                const incrAge = () => {
+                    this.age++;
+                };
+
+                wishJohn();
+                incrAge();
+            }
+        };
+
+        john.celebrateBirthday();
+        console.log(john);
+
+        const johnCopy = {
+            name: 'John',
+            age: 32,
+            celebrateBirthday() {
+                const wishJohn = function() {
+                    console.log(`Happy birthday ${this.name}`);
+                };
+
+                const incrAge = () => {
+                    this.age++;
+                };
+
+                wishJohn();
+                incrAge();
+            }
+        };
+
+        johnCopy.celebrateBirthday();
+        console.log(johnCopy);
+    </script>
+</body>
+
+</html>

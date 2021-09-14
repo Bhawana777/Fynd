@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .panel {
+            border: 1px solid lightgray;
+            margin: 0.25em 0;
+        }
+        
+        .panel-heading,
+        .panel-body {
+            padding: 1em;
+        }
+        
+        .panel-heading {
+            background-color: lightgray;
+            cursor: pointer;
+        }
+        
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="panel">
+            <!-- <div class="panel-heading" v-on:click="toggle( 'Vue' )">What is Vue JS</div> -->
+            <div class="panel-heading" v-on:click="isVisible = !isVisible">What is Vue JS</div>
+            <div class="panel-body" v-show="isVisible">
+                It is a library for easily constructing the UI
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import Vue from './vue.esm.browser.js'; new Vue({ el: '#app', data: { isVisible: true }, methods: { toggle( name ) { console.log( name ); /* if( this.isVisible === true ) { // this.isVisible = false; // } else { // this.isVisible = true;} */ this.isVisible=!this.isVisible;
+        } } });
+    </script>
+</body>
+
+</html>

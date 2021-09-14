@@ -1,0 +1,16 @@
+{
+    "name": "Vue-JS",
+    "version": "1.0.0",
+    "description": "",
+    "main": "vue.esm.browser.js",
+    "scripts": {
+        "start": "http-server",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "http-server": "^13.0.1"
+    }
+}

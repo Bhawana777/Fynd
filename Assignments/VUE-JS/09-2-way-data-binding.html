@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script type="module">
+        import Vue from './vue.esm.browser.js'; new Vue({ el: '#app', template: `
+        <form @submit="login">
+            <label for="fullname">Full name</label>
+            <input type="text" id="fullname" name="fullname" v-model="credentials.fullname" /> The full name is {{credentials.fullname}}
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" v-model="credentials.password" />
+            <button type="submit">Submit</button>
+            <p>
+                Fullname submitted is {{valuesToSubmit.fullname}}
+            </p>
+            <p>
+                Password submitted is {{valuesToSubmit.password}}
+            </p>
+        </form>
+        `, data: { credentials: { fullname: 'John Doe', password: '' },valuesToSubmit: { } }, methods: { login( event ) { event.preventDefault(); /*console.log( this.credentials );*/ this.valuesToSubmit = { ...this.credentials}; } } });
+    </script>
+</body>
+
+</html>

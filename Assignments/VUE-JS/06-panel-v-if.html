@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <template v-if="city === 'Mumbai'">
+                <p>Gateway of India</p>
+                <p>CST</p>
+            </template>
+        <template v-else-if="city === 'Bangalore'">
+                <p>Vidhan Soudha</p>
+                <p>Cubbon Park</p>
+            </template>
+        <template v-else-if="city === 'Delhi'">
+                <p>India Gate</p>
+                <p>Qutab Minar</p>
+            </template>
+        <template v-else>
+                <p>Not sure of the landmarks in this city</p>
+            </template>
+
+        <button @click="changeCity( 'Mumbai' )">Check Mumbai</button>
+        <button @click="city = 'Bangalore'">Check Bangalore</button>
+        <button @click="changeCity( 'Delhi' )">Check Delhi</button>
+        <button @click="city = 'Kolkata'">Check Kolkata</button>
+    </div>
+
+    <script type="module">
+        import Vue from './vue.esm.browser.js'; new Vue({ el: '#app', data: { city: 'Mumbai' }, methods: { changeCity( city ) { this.city = city; } } });
+    </script>
+</body>
+
+</html> -->
+<div class="panel-body" v-if="isVisible">
+    It is a library for easily constructing the UI
+</div>
+</div>
+</div>
+
+<script type="module">
+    import Vue from './vue.esm.browser.js'; new Vue({ el: '#app', data: { isVisible: true }, methods: { toggle( name ) { console.log( name ); /* if( this.isVisible === true ) { // this.isVisible = false; // } else { // this.isVisible = true; // }*/ this.isVisible
+    =! this.isVisible; } } });
+</script>
+</body>
+
+</html>

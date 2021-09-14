@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            padding: 1em;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script type="module">
+        import Vue from './vue.esm.browser.js'; const ChildComponent = { props: [ 'counter' ], data() { return { value: 0 }; }, template: `
+        <div class="box">
+            <div>Counter value (in child) is {{counter}}</div>
+            <input type="text" v-model.number="value" /> {{value}}
+            <!-- $emit() can be called as @click="$emit()" as well -->
+            <button @click="pleaseIncr">Increase counter</button>
+        </div>
+        `, methods: { pleaseIncr() { /*fire a custom event on child component instance*/ this.$emit( 'incr', this.value ); } } } 
+
+const ParentComponent = { components: { ChildComponent }, data() { return { counter1: 0, counter2: 0 }; }, methods: { incrCounter1(
+        event ) { this.counter1 += event; }, incrCounter2( event ) { this.counter2 += event; } }, template: `
+        <div class="box">
+            <div>Counter1 value (in parent) is {{counter1}}</div>
+            <div>Counter2 value (in parent) is {{counter2}}</div>
+            <child-component :counter="counter1" @incr="incrCounter1( $event )" />
+            <child-component :counter="counter2" @incr="incrCounter2" />
+        </div>
+        ` } 
+
+new Vue({ el: '#app', components: { ParentComponent }, template: `
+        <parent-component /> ` });
+    </script>
+</body>
+
+</html>

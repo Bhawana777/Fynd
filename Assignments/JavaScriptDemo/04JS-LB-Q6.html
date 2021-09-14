@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04JS-LB-Q6</title>
+</head>
+
+<body>
+    <h3> Open console</h3>
+    <div>
+        <li>
+            Test out if making a change to name and front camera details on the iPhone11 object affects the shallow copy.
+        </li>
+        <p>
+            Changing the name of the shadow copy, didnt affect the name of the original object
+        </p>
+        <p>
+            However, changing the cameras object in the shallowCopy affected the original object as well
+        </p>
+    </div>
+    <hr />
+    <div>
+        <li>What about the deep copy? Is it affected?</li>
+        <p>
+            Similiar to shallowCopy, primitive dataTypes such as name(string) doesnt get the original object
+        </p>
+        <p>
+            Unlike shallowCopy, any change to composite data types such as arrays and objects, wont affect the original object
+        </p>
+    </div>
+    <script>
+        const iPhone11 = {
+            name: 'iPhone 11',
+            manufacturer: 'Apple',
+            price: 699,
+            specs: {
+                color: 'White',
+                memory: {
+                    value: 128,
+                    unit: 'MB'
+                },
+                cameras: {
+                    front: '12 MP Wide',
+                    rear: '12 MP Ultra Wide'
+                },
+                availableColors: [
+                    'Black',
+                    'Green',
+                    'Yellow',
+                    'Purple',
+                    'Red',
+                    'White',
+                ],
+            },
+        };
+        // Shallow copy of the the iphone11 obj
+        let shallowCopy = {...iPhone11
+        };
+
+        // Deep copy of the the iphone11 obj
+        let deepCopy = {
+            ...iPhone11,
+            specs: {
+                ...iPhone11.specs,
+                memory: {
+                    ...iPhone11.specs.memory,
+                },
+                cameras: {
+                    ...iPhone11.specs.cameras,
+                },
+                availableColors: [...iPhone11.specs.availableColors],
+            },
+        };
+
+        shallowCopy.name = 'iPhone 11 shallowCopy';
+        shallowCopy.specs.cameras.front = '16 MP wide';
+
+        console.log('Original Object');
+        console.log(iPhone11);
+        console.log('Shallow copy of the object');
+        console.log(shallowCopy);
+
+        deepCopy.name = 'iPhone 11 deepCopy';
+        deepCopy.specs.cameras.front = '32 MP wide';
+
+        console.log('Original Object');
+        console.log(iPhone11);
+        console.log('Deep copy of the object');
+        console.log(deepCopy);
+    </script>
+</body>
+
+</html>

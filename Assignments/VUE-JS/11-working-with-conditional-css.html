@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .success {
+            color: green;
+        }
+        
+        .error {
+            color: crimson;
+        }
+        
+        .priority-high {
+            font-weight: bold;
+        }
+        
+        .priority-low {
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script type="module">
+        import Vue from './vue.esm.browser.js'; new Vue({ el: '#app', template: `
+        <div>
+            <!-- { success: true, 'priority-high' : false, 'priority-low': true } -->
+            <button @click="togglePass">Toggle pass (true/false)</button>
+            <div :class="[ messageTypeStyle, messagePriorityStyle ]">{{message}}</div>
+            <div :style="[ messageTypeInlineStyle, messagePriorityInlineStyle ]">{{message}}</div>
+        </div>
+        `, data: { message: 'All good! Data was saved.', success: true, priority: 'high' }, computed: { messageTypeStyle() { return { success: this.success === true, error: this.success === false }; }, messagePriorityStyle() { return { 'priority-high': this.priority
+        === 'high', 'priority-low': this.priority === 'low' }; }, messageTypeInlineStyle() { return { color: this.success ? 'green' : 'crimson' }; }, messagePriorityInlineStyle() { if( this.priority === 'high' ) { return { 'font-weight': 'bold', 'font-size':
+        '1.5em' }; } else { return { 'font-weight': 'normal', 'font-size': '1em' }; } } }, methods: { togglePass() { this.pass = !this.pass;} } });
+    </script>
+</body>
+
+</html>

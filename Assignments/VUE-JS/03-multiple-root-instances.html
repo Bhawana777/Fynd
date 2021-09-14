@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root-1"></div>
+    <div id="root-2"></div>
+
+    <script type="module">
+        import Vue from './vue.esm.browser.js'; /** * The root instance forms the View-Model (data for the View) */ const rootInstance1 = new Vue({ /* el: '#root',*/ template: `
+        <div id="app">
+            <div title="message">
+                Hello {{framework}}
+                <button v-on:click="changeFramework">Update Vue JS</button>
+            </div>
+        </div>
+        `, data: { framework: 'Vue JS' }, methods: { changeFramework() { this.framework = 'Vue JS v2.6'; } } }); rootInstance1.$mount( '#root-1' ); const rootInstance2 = new Vue({ /* el: '#root',*/ template: `
+        <div id="app">
+            <div title="message">
+                Hello {{framework}}
+                <button v-on:click="changeFramework">Update Vue JS</button>
+            </div>
+        </div>
+        `, data: { framework: 'React JS' }, methods: { changeFramework() { this.framework = 'React JS v17'; } } }); rootInstance2.$mount( '#root-2' );
+    </script>
+</body>
+
+</html>

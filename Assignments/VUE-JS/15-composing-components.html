@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .message {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script type="module">
+        import Vue from './vue.esm.browser.js'; import WeatherReport from './15-WeatherReport.js'; new Vue({ el: '#app', components: { /*WeatherReport: WeatherReport is same as below*/ WeatherReport }, data: { city: 'Mumbai', rainfall: 20, temperature: { min:
+        20, max: 30 } }, /* both :prop="value" and v-bind:prop="value" do the same thing but :prop="value" is easy to easy */ /* when you pass non-string values (or even strings in variables) alwats bind the prop as :prop="value". Only for hard-coded
+        string literals like "Sep 8, 2021", "Hello, world" etc. we do not use attribute binding */ template: `
+        <weather-report date="Sep 8, 2021" :tomorrowRainfall="30" :dayAfterTomorrowRainfall="40" :city="city" v-bind:rainfall="rainfall" :nextFiveDaysRainfall="[ 30, 40, 50, 60, 70 ]" :temperature="temperature" /> ` });
+    </script>
+</body>
+
+</html>

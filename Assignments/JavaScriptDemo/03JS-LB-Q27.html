@@ -1,0 +1,65 @@
+<!DOCTYPE>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03JS-LB-Q27</title>
+    <style>
+        .styled-para {
+            border: 1px solid black;
+            padding: 5px;
+            color: rgb(69, 12, 202);
+        }
+    </style>
+</head>
+
+<body>
+
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, sunt?</p>
+    <p id="p2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis et suscipit eius? Et assumenda odio pariatur saepe nam quidem magni?</p>
+    <p id="p3">Lorem ipsum dolor sit amet.</p>
+
+    <script>
+        const p1 = document.querySelector('#p1');
+        const p2 = document.querySelector('#p2');
+        const p3 = document.querySelector('#p3');
+
+        const newParaBefore = document.createElement('p');
+        newParaBefore.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde asperiores sit minus, a autem numquam ducimus mollitia rem vel quae?'
+        document.body.insertBefore(newParaBefore, p1);
+
+        const newParaAfter = document.createElement('p');
+        newParaAfter.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolorum animi, quisquam officia alias quas, mollitia, nisi nostrum velit itaque delectus enim perspiciatis aperiam reiciendis?';
+        document.body.appendChild(newParaAfter);
+
+
+
+        console.log(p1.innerText)
+
+        const span1 = document.createElement('span');
+        const span2 = document.createElement('span');
+        span1.innerText = 'span1';
+        span2.innerText = 'span2';
+
+        p1.removeChild(p1.childNodes[0]);
+        p1.appendChild(span1);
+        p1.appendChild(span2);
+
+
+        console.log(p2.getAttribute('id'));
+        p2.setAttribute('id', 'changedP2id');
+        console.log(p2.getAttribute('id'));
+
+        p2.setAttribute('name', 'paragraph2');
+
+        p3.setAttribute('style', 'background-color: crimson; color: white;');
+
+
+        let lastPara = document.querySelectorAll('p:last-child');
+        lastPara[0].classList.add('styled-para');
+    </script>
+</body>
+
+</html>
